@@ -1,0 +1,17 @@
+pefile
+python-slugify[Unidecode]
+Unidecode
+text-unidecode
+six
+backports-datetime-fromisoformat
+pycryptodome
+pyuca
+unidecode
+python-dateutil
+filelock
+boto3
+requests
+keyring
+psutil
+pyinstaller
+PyQt5
