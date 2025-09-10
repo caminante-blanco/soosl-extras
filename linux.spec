@@ -59,7 +59,7 @@ excludes = [
     'QtNfc', 
     'QtSerialPort']
     
-a = Analysis(['soosl.py'],
+a = Analysis(['launcher.py'],
     binaries=[],
     datas=extra_files,
     hiddenimports=[],

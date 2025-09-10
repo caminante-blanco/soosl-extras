@@ -66,7 +66,7 @@ excludes = [
     'PyQt5.QtSerialPort'
     ]
 
-a = Analysis(['SooSL.py'],
+a = Analysis(['launcher.py'],
              pathex=[],
              binaries=[],
              datas=added_files,
@@ -84,7 +84,7 @@ exe = EXE(pyz,
           a.scripts,
           [],
           exclude_binaries=True,
-          name='SooSL_094',
+          name='soosl',
           debug=False,
           bootloader_ignore_signals=False,
           strip=False,
