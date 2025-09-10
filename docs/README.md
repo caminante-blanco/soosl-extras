@@ -1,13 +1,14 @@
-SooSL 0.9.4
-====================================================
-Windows (7 --> 11)
-macOS (Sierra 10.12 --> Sequoia* and beyond???)
-Linux (Ubuntu 20.04 Focal Fossa --> Ubuntu 24.04 LTS Noble Numbat and Debian Trixie)**
-----------------------------------------------------
-*(Both Intel and ARM - with Rosetta)
-** If Linux not available at time of Windows and macOS releases, it will soon follow...
-  Possibly other Debian and Ubuntu based releases, but untested...
-----------------------------------------------------
+# SooSL 0.9.4
+
+**Windows (7 --> 11)**
+**macOS (Sierra 10.12 --> Sequoia* and beyond???)**
+**Linux (Ubuntu 20.04 Focal Fossa --> Ubuntu 24.04 LTS Noble Numbat and Debian Trixie)***
+
+---
+*\* (Both Intel and ARM - with Rosetta)*
+*\*\* If Linux not available at time of Windows and macOS releases, it will soon follow...*
+  *Possibly other Debian and Ubuntu based releases, but untested...*
+---
 
 SooSL enables you to make a dictionary of any sign language using videos.
 It also serves as a viewer for the dictionaries it creates.
@@ -26,35 +27,34 @@ We will work hard to migrate your data from one beta version to the next.
 Copyright SIL International 2009 - 2025; more copyright and licensing information given at the
 end of this document.
 
+## Installation instructions
 
-Installation instructions
-=========================
 If you already have SooSL installed there is no need to uninstall or remove it.
 (Windows exception: If you want to install to a different location than before,
  then you will need to uninstall it first.)
 If SooSL is currently running, close it before proceeding with installation.
 SooSL will remember your old settings along with the locations of any project files.
 
-Windows
--------------------------
+### Windows
+
 1. Download 'SooSL-<<version>>-win32.exe' from www.soosl.net/software.html.
 2. Save the file to your downloads folder.    
 3. Double-click on the .exe file to run the installer program.    
 4. Follow the instructions. 
 
-For "silent" installation under Windows, run the installer in a command prompt window with either the "/SILENT" or "/VERYSILENT" command line parameter. For more information about these command line parameters and others that may be useful, see: https://jrsoftware.org/ishelp/index.php?topic=setupcmdline.
+For "silent" installation under Windows, run the installer in a command prompt window with either the "/SILENT" or "/VERYSILENT" command line parameter. For more information about these command line parameters and others that may be useful, see: [https://jrsoftware.org/ishelp/index.php?topic=setupcmdline](https://jrsoftware.org/ishelp/index.php?topic=setupcmdline).
     
-macOS
--------------------------
+### macOS
+
  1. Download 'SooSL-<<version>>-macos.pkg' from www.soosl.net/software.html.
  2. Locate this file and double-click on it to open if it does not automatically open and begin installation.
 
-Linux
--------------------------
+### Linux
+
 Linux is now available in the packages.sil.org repositories and is installable
 through your usual package management software. Wasta-Linux has these repositories
 available by default; other Ubuntu users may need to enable them following the 
-instructions at: http://packages.sil.org. Additionally, Debian users may need to 
+instructions at: [http://packages.sil.org](http://packages.sil.org). Additionally, Debian users may need to
 edit the SIL repository in "Software & Updates" to include "contrib":
 "http://packages.sil.org/debian trixie main contrib".
 
@@ -63,8 +63,8 @@ If your Debian version is older than "Trixie", one of the earlier Ubuntu version
 For Debian "Bookworm (12)" try Ubuntu "Jammy (22.04)"; for Debian "Bullseye (11)" try Ubuntu "Focal (20.04)". 
 
 
-Downloading and installing a demo sign language project
-=======================================================
+## Downloading and installing a demo sign language project
+
 a. Download a demo project from www.soosl.net for your version of SooSL.
 b. Start SooSL     
 c. Click the blue spanner/wrench icon (top right) & click "Import Project"     
@@ -74,26 +74,26 @@ c. Click the blue spanner/wrench icon (top right) & click "Import Project"
  Highlight the project name you want and click "Ok".]
  
  
-After installation
-================== 
+## After installation
+
 If the program looks awkward on your computer's screen after installation, 
 click the reset button at the bottom-right of SooSL's program window (red heart icon). 
   
   
-Help with SooSL
-===============
+## Help with SooSL
+
 English help files while running SooSL ...
     * Click on the blue '?' icon at top, right of program window (next to the blue spanner/wrench icon)
     * Also, as an item in the tools menu (blue spanner/wrench icon (top right))
-    * Available on the web at: https://www.soosl.net/help/en/index.html.
+    * Available on the web at: [https://www.soosl.net/help/en/index.html](https://www.soosl.net/help/en/index.html).
 
 Contact us ...
-    * Use the contact form on our website: https://soosl.net/contact.html.
+    * Use the contact form on our website: [https://soosl.net/contact.html](https://soosl.net/contact.html).
     * In SooSL, click the blue spanner/wrench icon and choose "Send Feedback".
 
 
-What's New?
-===========
+## What's New?
+
 To display "Release Notes" while running SooSL:
     * Click on the blue spanner/wrench icon in the top right of the program window.
     * Select "About SooSL" from the menu that appears.
@@ -101,51 +101,50 @@ To display "Release Notes" while running SooSL:
 
 Other places:
     * See RELEASE_NOTES in the /docs folder of your SooSL installation.
-    * See https://soosl.net/software.html#WhatsNew for the current version.
-    * See https://soosl.net/older_software_and_sources.html#Changes for older versions.
+    * See [https://soosl.net/software.html#WhatsNew](https://soosl.net/software.html#WhatsNew) for the current version.
+    * See [https://soosl.net/older_software_and_sources.html#Changes](https://soosl.net/older_software_and_sources.html#Changes) for older versions.
 
 
-Copyright & Licensing
-========================================
+## Copyright & Licensing
+
 (Windows and macOS: See COPYING.txt for full version of GPL-3 license.)
 
-Files: * (except vlc.py - see below)
-Copyright: 2009 - 2025 SIL International (https://sil.org)
+**Files: * (except vlc.py - see below)**
+Copyright: 2009 - 2025 SIL International ([https://sil.org](https://sil.org))
 License: GPL-3+
- This package is free software; you can redistribute it and/or modify
+
+This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
  the Free Software Foundation; either version 3 of the License, or
  (at your option) any later version.
- .
- This package is distributed in the hope that it will be useful,
+
+This package is distributed in the hope that it will be useful,
  but WITHOUT ANY WARRANTY; without even the implied warranty of
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  GNU General Public License for more details.
- .
- You should have received a copy of the GNU General Public License
+
+You should have received a copy of the GNU General Public License
  along with this program. If not, see <https://www.gnu.org/licenses/>
- .
- On Debian systems, the complete text of the GNU General
+
+On Debian systems, the complete text of the GNU General
  Public License version 3 can be found in "/usr/share/common-licenses/GPL-3".
 
-Files: /usr/share/soosl/vlc.py
-Copyright: 2009-2017 the VideoLAN team (https://www.olivieraubert.net/vlc/python-ctypes/)
+**Files: /usr/share/soosl/vlc.py**
+Copyright: 2009-2017 the VideoLAN team ([https://www.olivieraubert.net/vlc/python-ctypes/](https://www.olivieraubert.net/vlc/python-ctypes/))
 License: GPL-2+
- This program is free software; you can redistribute it and/or modify
+
+This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
  the Free Software Foundation; either version 2 of the License, or
  (at your option) any later version.
- .
- This program is distributed in the hope that it will be useful,
+
+This program is distributed in the hope that it will be useful,
  but WITHOUT ANY WARRANTY; without even the implied warranty of
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  GNU General Public License for more details.
- .
- You should have received a copy of the GNU General Public License
+
+You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
- .
- On Debian systems the full text of the GNU General Public
- License can be found in the `/usr/share/common-licenses/GPL-2' file.
 
-
-
+On Debian systems the full text of the GNU General Public
+ License can be found in the `/usr/share/common-licenses/GPL-2` file.
