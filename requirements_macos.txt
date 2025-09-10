@@ -1,8 +1,7 @@
 pefile==2019.4.18
 pycryptodome==3.9.8
 pyinstaller==5.13.0
-pyobjc-core==6.2.2
-pyobjc-framework-Cocoa==6.2.2
+pyobjc==11.1
 PyQt5==5.15.11
 python-slugify[Unidecode]==4.0.1
 Unidecode==1.1.1
