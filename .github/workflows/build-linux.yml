@@ -1,4 +1,4 @@
-name: Build macOS Executable
+name: Build Linux Executable
 
 on:
   push:
@@ -7,9 +7,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-macos:
-    name: Build on macOS
-    runs-on: macos-latest
+  build-linux:
+    name: Build on Linux
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
@@ -21,13 +21,16 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install PyQt5 pyinstaller
+        run: |
+          pip install PyQt5 pyinstaller
+          sudo apt-get update
+          sudo apt-get install -y libxcb-xinerama0
 
       - name: Build the application
-        run: python3 build_macos.py
+        run: python3 build_linux.py
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: SooSL-Launcher-macOS
-          path: dist/
+          name: SooSL-Linux
+          path: linux_dist/

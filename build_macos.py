@@ -27,7 +27,7 @@ def createReleaseNotes(version):
     release_notes_path = os.path.join(docs_dir, "RELEASE_NOTES")
     with open(release_notes_path, 'w', encoding='utf-8') as f:
         f.write(text)
-createReleaseNotes(__version__)
+# createReleaseNotes(__version__)
 
 f = open('macos.spec', encoding='utf-8')
 orig_text = f.read()
@@ -63,5 +63,8 @@ if os.path.exists(app) and os.path.exists('./PkgInfo'):
     # os.remove(app + '/Contents/MacOS/lib')
     # shutil.rmtree(app + '/Contents/Resources/include')
     # shutil.rmtree(app + '/Contents/Resources/lib')
-if os.path.exists(app) and os.path.exists('/Applications/App Wrapper 4.app'):
-    os.system('/Users/Shared/awhelper /Users/timothygrove/soosl\-desktop/dist/SooSL.app')
+# if os.path.exists(app) and os.path.exists('/Applications/App Wrapper 4.app'):
+#     # This command is specific to a local developer machine and will fail in CI.
+#     # It is used for code signing and notarization, which needs to be handled
+#     # differently in an automated build environment.
+#     os.system('/Users/Shared/awhelper /Users/timothygrove/soosl\-desktop/dist/SooSL.app')

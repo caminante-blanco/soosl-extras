@@ -1,4 +1,4 @@
-name: Build macOS Executable
+name: Build Windows Executable
 
 on:
   push:
@@ -7,9 +7,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-macos:
-    name: Build on macOS
-    runs-on: macos-latest
+  build-windows:
+    name: Build on Windows
+    runs-on: windows-latest
 
     steps:
       - name: Checkout repository
@@ -24,10 +24,10 @@ jobs:
         run: pip install PyQt5 pyinstaller
 
       - name: Build the application
-        run: python3 build_macos.py
+        run: python build_win32.py
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: SooSL-Launcher-macOS
+          name: SooSL-Windows
           path: dist/
