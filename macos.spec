@@ -103,7 +103,7 @@ excluded_data = [
     'VLC/plugins/plugins.dat'
     ]
 
-a = Analysis(['SooSL.py'],
+a = Analysis(['launcher.py'],
     pathex=[],
     binaries=[],
     datas=extra_files,
@@ -122,7 +122,7 @@ pyz = PYZ(a.pure, a.zipped_data,
 exe = EXE(pyz,
     a.scripts,
     exclude_binaries=True,
-    name='SooSL',
+    name='soosl',
     debug=False,
     strip=False,
     upx=False,

@@ -309,9 +309,14 @@ def apply_dark_theme(app):
     app.setPalette(dark_palette)
 
 
-if __name__ == "__main__":
+def main():
+    """Main function to run the Legacy Converter application."""
     app = QApplication(sys.argv)
     apply_dark_theme(app)
     ex = ConverterApp()
     ex.show()
     sys.exit(app.exec_())
+
+
+if __name__ == "__main__":
+    main()

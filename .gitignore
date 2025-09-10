@@ -1,0 +1,15 @@
+# Build artifacts
+dist/
+build/
+linux_dist/
+linux_build/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# PyInstaller
+*.spec
+
+# Log files
+*.log
