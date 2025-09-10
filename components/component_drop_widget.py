@@ -5,17 +5,17 @@
 Copyright SIL International 2009 - 2025.
 
 This file is part of SooSL™.
-
+ 
 SooSL™ is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
-
+ 
 SooSL™ is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
-
+ 
 You should have received a copy of the GNU General Public License
 along with SooSL™.  If not, see <http://www.gnu.org/licenses/>.
 """
@@ -38,39 +38,39 @@ from PyQt5.QtWidgets import QPushButton
 from components.component import ComponentItem
 from components import component_descriptions
 from components import component_type
-
+        
 class ComponentDropWidget(QListWidget):
     show_change_location_details = pyqtSignal(bool)
     list_changed = pyqtSignal()
     location_removed = pyqtSignal(str)
     locationItemClicked = pyqtSignal(str)
-
+    
     def __init__(self, parent=None):
         super(ComponentDropWidget, self).__init__(parent)
         self.setFocusPolicy(Qt.NoFocus)
         self.pm = qApp.instance().pm
-        self.deprecatedCodesAll = self.pm.getAllDeprecatedCodes()
+        self.deprecatedCodesAll = self.pm.getAllDeprecatedCodes()  
         self.setViewMode(QListView.IconMode)
         self.setResizeMode(QListView.Adjust)
         self.setFlow(QListView.LeftToRight)
         size = QSize(46, 65)
-        self.setSpacing(6)
+        self.setSpacing(6)        
         self.setIconSize(size)
         self.setMinimumHeight(70)
         self.codeList = []
         self.dialect_filter = []
         self.editing = False
-        self.setDragDropMode(QAbstractItemView.DragDrop)
+        self.setDragDropMode(QAbstractItemView.DragDrop) 
         self.settings = qApp.instance().getSettings()
         self.setStyleSheet("""background: white""")
-
+        
         comp_descriptions = component_descriptions.ComponentDescriptions()
         self.symbol_dict = comp_descriptions.symbol_dict()
         settings = qApp.instance().getSettings()
         self.use_photo_help = int(settings.value("photoHelp", 1))
         self.editable = False
-
-        self.list_changed.connect(qApp.instance().pm.onAmended)
+        
+        self.list_changed.connect(qApp.instance().pm.onAmended) 
         self.itemClicked.connect(self.onItemClicked)
 
     def onItemClicked(self, item):
@@ -80,7 +80,7 @@ class ComponentDropWidget(QListWidget):
             self.locationItemClicked.emit(code)
         else:
             self.locationItemClicked.emit('')
-
+        
     def changeEvent(self, evt):
         if evt.type() == QEvent.LanguageChange and self.count():
             comp_descriptions = component_descriptions.ComponentDescriptions()
@@ -96,15 +96,15 @@ class ComponentDropWidget(QListWidget):
 
     def setEditable(self, _bool):
         self.editable = _bool
-
+        
     def description(self, code):
         return self.symbol_dict.get(code, '')
-
-    ##!!@pyqtSlot(str)
+    
+    ##!!@pyqtSlot(str)      
     def onItemSelected(self, code):
         if self.editable:
             self.addComponent(code)
-
+    
     def mouseReleaseEvent(self, event):
         if self.editable:
             row = self.currentRow()
@@ -112,7 +112,7 @@ class ComponentDropWidget(QListWidget):
                 item = self.takeItem(row)
                 self.removeComponentItem(item)
         return super(ComponentDropWidget, self).mouseReleaseEvent(event)
-
+            
     def dropEvent(self, event):
         if self.editable and event.source() is not self:
             row = self.row(self.itemAt(event.pos()))
@@ -122,7 +122,7 @@ class ComponentDropWidget(QListWidget):
                 pass
             else:
                 self.addComponent(code, row)
-
+            
     def removeComponent(self, code):
         try:
             self.codeList.remove(code)
@@ -133,14 +133,14 @@ class ComponentDropWidget(QListWidget):
             if code == component_type.changeLocationCode():
                 self.show_change_location_details.emit(False)
                 self.__removeChangeLocationDetails()
-            #del item
+            #del item 
             self.list_changed.emit()
             self.adjustListSize()
-
+            
     def addComponent(self, code, row=-1):
         item = ComponentItem(code)
         if code in self.codeList:
-            title = ' '
+            title = ' ' 
             message = '<strong style="color:blue;">{}</strong>'.format(qApp.instance().translate('ComponentDropWidget', 'This parameter has already been added'))
             if component_type.byCode(code) == 'handshape':
                 message = '{}<br><br>{}'.format(message, qApp.instance().translate('ComponentDropWidget', 'Use a Sign type parameter to indicate a two handed sign.'))
@@ -149,7 +149,7 @@ class ComponentDropWidget(QListWidget):
             mbox.exec_()
             del item
             return
-
+        
         if code in self.deprecatedCodesAll:
             title = ' '
             message = qApp.instance().translate('ComponentDropWidget', 'This parameter may be removed in a future release')
@@ -157,10 +157,10 @@ class ComponentDropWidget(QListWidget):
             mbox = QMessageBox(QMessageBox.Information, title, '<strong style="color:blue;">{}</strong><br><br>{}'.format(message, message2), parent=self)
             mbox.setIconPixmap(QPixmap(item.iconPth))
             mbox.exec_()
-
+                
         if code == component_type.changeLocationCode():
-            self.show_change_location_details.emit(True)
-
+            self.show_change_location_details.emit(True)                
+        
         if item.component.type == 'location':
             tip = qApp.instance().translate('ComponentDropWidget', 'Highlight location (yellow) by clicking')
             self.addToolTip(item, tip)
@@ -170,11 +170,11 @@ class ComponentDropWidget(QListWidget):
         self.codeList.sort(key=lambda x: component_type.sortOrder(x))
         row = self.codeList.index(code)
         self.insertItem(row, item)
-
+        
         self.list_changed.emit()
         self.adjustListSize()
-
-    ##!!@pyqtSlot(bool)
+    
+    ##!!@pyqtSlot(bool)          
     def resetHandshapeToolTips(self, photos):
         #only handshapes need to be reset
         self.use_photo_help = photos
@@ -186,7 +186,7 @@ class ComponentDropWidget(QListWidget):
             if descript:
                 tip = descript[0]
             self.addToolTip(item, tip)
-
+                
     def addToolTip(self, item, description):
         if self.use_photo_help and hasattr(item, 'photoHelpPths'):
             pths = item.component.photo_help_pths()
@@ -211,7 +211,7 @@ class ComponentDropWidget(QListWidget):
             del item
             self.list_changed.emit()
             self.adjustListSize()
-
+        
     def clearComponents(self):
         """used by external modules for clearing list
         """
@@ -220,24 +220,24 @@ class ComponentDropWidget(QListWidget):
         # if project and self.editing:
         #     for code in self.codeList:
         #         project.removeComponent(code)
-        self.codeList = []
+        self.codeList = [] 
         # if qApp.hasPendingEvents():
-        #     qApp.processEvents()
+        #     qApp.processEvents() 
         self.list_changed.emit()
         self.adjustListSize()
         #QTimer.singleShot(200, self.clear)
-
-    ##!!@pyqtSlot(bool)
+    
+    ##!!@pyqtSlot(bool)      
     def onDeleteSign(self, _bool):
         """mark gui for delete/undelete"""
         self.setDisabled(_bool)
-        color = QColor(Qt.white)
+        color = QColor(Qt.white) 
         if _bool:
-
+            
             self.setStyleSheet("""background: {}""".format(color))
         else:
-            self.setStyleSheet(None)
-
+            self.setStyleSheet(None)  
+            
     def __removeChangeLocationDetails(self):
         count = self.count()
         if count:
@@ -246,15 +246,15 @@ class ComponentDropWidget(QListWidget):
                 if component_type.byCode(item.code) == 'changelocation':
                     item = self.takeItem(row)
                     self.removeComponentItem(item)
-
+            
     def __checkForChangeLocation(self, codes):
-        _bool = False
+        _bool = False 
         for c in codes:
             if c == component_type.changeLocationCode():
                 _bool = True
                 break
-        self.show_change_location_details.emit(_bool)
-
+        self.show_change_location_details.emit(_bool)                         
+                
     def onModelReset(self, sign):
         self.clear()
         if sign:
@@ -268,22 +268,22 @@ class ComponentDropWidget(QListWidget):
             if self.editing:
                 self.__checkForChangeLocation(codes)
             else:
-                self.show_change_location_details.emit(True)
+                self.show_change_location_details.emit(True) 
             for code in codes:
                 item = ComponentItem(code, self)
                 tip = self.description(code)
                 if code in location_codes:
                     tip = qApp.instance().translate('ComponentDropWidget', 'Highlight location (yellow) by clicking')
                 item.setToolTip(tip)
-
+                
             self.adjustListSize()
-
+            
     def getSignData(self):
         ## the location parameters are really on used in this widget for display and editing purposes;
         ## remove them before returning data
         comp_codes = qApp.instance().pm.get_non_location_codes_from_list(self.codeList)
         return {"componentCodes": comp_codes}
-
+    
     #@property
     def dirty(self):
         orig_codes = []
@@ -300,15 +300,15 @@ class ComponentDropWidget(QListWidget):
         if sorted(orig_codes) != sorted(self.codeList):
             return True
         return False
-
-    ##!!@pyqtSlot(list)
+    
+    ##!!@pyqtSlot(list)              
     def filterByDialects(self, dialects):
         if not dialects or len(dialects) == len(self.pm.getAllDialects()):
             self.dialect_filter = []
         else:
-            self.dialect_filter = dialects
-
-    ##!!@pyqtSlot()
+            self.dialect_filter = dialects 
+    
+    ##!!@pyqtSlot()        
     def enterEditingMode(self):
         self.setAcceptDrops(True)
         if not self.editing:
@@ -317,14 +317,14 @@ class ComponentDropWidget(QListWidget):
             self.setEnabled(True)
             self.onModelReset(self.pm.sign)
 
-    ##!!@pyqtSlot()
+    ##!!@pyqtSlot()     
     def leaveEditingMode(self):
         self.setAcceptDrops(False)
         self.editing = False
         self.editable = False
         self.setStyleSheet(None)
         self.setEnabled(True)
-
+        
     def resetIcons(self):
         """reset component icons on componentViewImageChange
         """
@@ -335,7 +335,7 @@ class ComponentDropWidget(QListWidget):
         self.doItemsLayout()
         self.adjustListSize()
 
-    def adjustListSize(self):
+    def adjustListSize(self):        
         grid_w = 0
         idx = 0
         while True:
@@ -344,8 +344,8 @@ class ComponentDropWidget(QListWidget):
                 break
             else:
                 grid_w = max(w, grid_w)
-            idx += 1
-
+            idx += 1            
+            
         grid_h = 0
         idx = 0
         while True:
@@ -368,9 +368,9 @@ class ComponentDropWidget(QListWidget):
             if new_height != self.height() and \
                 item_count+col_count != col_count*row_count: #condition when row is full; don't change height until item for next line added
                 self.setFixedHeight(new_height)
-
+                
     def resizeEvent(self, *args, **kwargs):
-        QListWidget.resizeEvent(self, *args, **kwargs)
+        QListWidget.resizeEvent(self, *args, **kwargs) 
         self.adjustListSize()
 
     def onAddLocationItem(self, code, _bool):
@@ -406,3 +406,7 @@ class ClearParametersButton(QPushButton):
         source = evt.source()
         if source is self.parameter_list:
             evt.accept()
+
+
+
+    

@@ -5,17 +5,17 @@
 Copyright SIL International 2009 - 2025.
 
 This file is part of SooSL™.
-
+ 
 SooSL™ is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
-
+ 
 SooSL™ is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
-
+ 
 You should have received a copy of the GNU General Public License
 along with SooSL™.  If not, see <http://www.gnu.org/licenses/>.
 """
@@ -28,7 +28,7 @@ from PyQt5.QtWidgets import qApp
 
 class ComponentDescriptions(QObject):
 # removed many not used in SooSL; see component_descriptions_full_listing.py in "workshop"
-
+    
     def symbol_dict(self):
         return OrderedDict([
         ('100', qApp.instance().translate('ComponentDescriptions', 'Index')),
@@ -291,7 +291,7 @@ class ComponentDescriptions(QObject):
         ('201', qApp.instance().translate('ComponentDescriptions', 'Thumb Under Four Fingers')),
         ('202', qApp.instance().translate('ComponentDescriptions', 'Thumb Over Four Raised Knuckles')),
         ('203', qApp.instance().translate('ComponentDescriptions', 'Fist')),
-        ('204', qApp.instance().translate('ComponentDescriptions', 'Fist Heel')),
+        ('204', qApp.instance().translate('ComponentDescriptions', 'Fist Heel')), 
         ('214', qApp.instance().translate('ComponentDescriptions', 'Surface Symbols')),
         ('215', qApp.instance().translate('ComponentDescriptions', 'Surface Between')),
         ('2ff', qApp.instance().translate('ComponentDescriptions', 'Whole head movement')),
@@ -301,16 +301,16 @@ class ComponentDescriptions(QObject):
         ('331', qApp.instance().translate('ComponentDescriptions', 'Nose movement')),
         ('335', qApp.instance().translate('ComponentDescriptions', 'Mouth movement')),
         ('368', qApp.instance().translate('ComponentDescriptions', 'Chin movement')),
-        ('370', qApp.instance().translate('ComponentDescriptions', 'Other non-manual movement')),
+        ('370', qApp.instance().translate('ComponentDescriptions', 'Other non-manual movement')), 
         ('1000', qApp.instance().translate('ComponentDescriptions', 'No hands')),
         ('1001', qApp.instance().translate('ComponentDescriptions', '1-handed')),
         ('1002', qApp.instance().translate('ComponentDescriptions', '2-handed: Only strong hand moves')),
         ('1003', qApp.instance().translate('ComponentDescriptions', '2-handed: Both move')),
         ('1004', qApp.instance().translate('ComponentDescriptions', '2-handed: Both move touching as one unit')),
-        ('1005', qApp.instance().translate('ComponentDescriptions', 'Fingerspelled (mostly lexicalized)')),
+        ('1005', qApp.instance().translate('ComponentDescriptions', 'Fingerspelled (mostly lexicalized)')),         
         ('1010', qApp.instance().translate('ComponentDescriptions', 'Change handshape')),
         ('1011', qApp.instance().translate('ComponentDescriptions', 'Change orientation')),
-        ('1012', qApp.instance().translate('ComponentDescriptions', 'Hand changes location')),
+        ('1012', qApp.instance().translate('ComponentDescriptions', 'Hand changes location')),         
         ('1013', qApp.instance().translate('ComponentDescriptions', 'No change (in handshape, orientation, or location)')),
         ('1021', qApp.instance().translate('ComponentDescriptions', 'Straight')),
         ('1022', qApp.instance().translate('ComponentDescriptions', 'Curved')),
@@ -320,29 +320,31 @@ class ComponentDescriptions(QObject):
         ('1026', qApp.instance().translate('ComponentDescriptions', 'Away from body')),
         ('1027', qApp.instance().translate('ComponentDescriptions', 'Not consistent toward/away')),
         ('1028', qApp.instance().translate('ComponentDescriptions', 'Repetition: 1x')),
-        ('1029', qApp.instance().translate('ComponentDescriptions', 'Repetition: 2+')),
+        ('1029', qApp.instance().translate('ComponentDescriptions', 'Repetition: 2+')),        
         ('102a', qApp.instance().translate('ComponentDescriptions', 'Fast (deprecated)')),
         ('102b', qApp.instance().translate('ComponentDescriptions', 'Slow (deprecated)')),
         ('102c', qApp.instance().translate('ComponentDescriptions', 'Tense (deprecated)')),
-        ('102d', qApp.instance().translate('ComponentDescriptions', 'Relaxed (deprecated)')),
+        ('102d', qApp.instance().translate('ComponentDescriptions', 'Relaxed (deprecated)')),         
         ('1030', qApp.instance().translate('ComponentDescriptions', 'Touch')),
         ('1031', qApp.instance().translate('ComponentDescriptions', 'Grasp')),
         ('1032', qApp.instance().translate('ComponentDescriptions', 'Strike (deprecated)')),
         ('1033', qApp.instance().translate('ComponentDescriptions', 'Brush (deprecated)')),
         ('1034', qApp.instance().translate('ComponentDescriptions', 'Rub (deprecated)')),
-        ('1035', qApp.instance().translate('ComponentDescriptions', 'Almost touch (near)'))
+        ('1035', qApp.instance().translate('ComponentDescriptions', 'Almost touch (near)'))     
         ])
-
+    
     def symbol_group_dict(self):
         return OrderedDict([
-        ('100', qApp.instance().translate('ComponentDescriptions', 'Index')),
-        ('10e', qApp.instance().translate('ComponentDescriptions', 'Index Middle')),
-        ('11e', qApp.instance().translate('ComponentDescriptions', 'Index Middle Thumb')),
-        ('144', qApp.instance().translate('ComponentDescriptions', 'Four Fingers')),
-        ('14c', qApp.instance().translate('ComponentDescriptions', 'Five Fingers')),
-        ('186', qApp.instance().translate('ComponentDescriptions', 'Baby Finger')),
-        ('1a4', qApp.instance().translate('ComponentDescriptions', 'Ring Finger')),
-        ('1ba', qApp.instance().translate('ComponentDescriptions', 'Middle Finger')),
-        ('1cd', qApp.instance().translate('ComponentDescriptions', 'Index Thumb')),
-        ('1f5', qApp.instance().translate('ComponentDescriptions', 'Thumb')),
+        ('100', qApp.instance().translate('ComponentDescriptions', 'Index')), 
+        ('10e', qApp.instance().translate('ComponentDescriptions', 'Index Middle')), 
+        ('11e', qApp.instance().translate('ComponentDescriptions', 'Index Middle Thumb')), 
+        ('144', qApp.instance().translate('ComponentDescriptions', 'Four Fingers')), 
+        ('14c', qApp.instance().translate('ComponentDescriptions', 'Five Fingers')), 
+        ('186', qApp.instance().translate('ComponentDescriptions', 'Baby Finger')), 
+        ('1a4', qApp.instance().translate('ComponentDescriptions', 'Ring Finger')), 
+        ('1ba', qApp.instance().translate('ComponentDescriptions', 'Middle Finger')), 
+        ('1cd', qApp.instance().translate('ComponentDescriptions', 'Index Thumb')), 
+        ('1f5', qApp.instance().translate('ComponentDescriptions', 'Thumb')), 
         ])
+    
+                

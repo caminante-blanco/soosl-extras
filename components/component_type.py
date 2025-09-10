@@ -5,17 +5,17 @@
 Copyright SIL International 2009 - 2025.
 
 This file is part of SooSL™.
-
+ 
 SooSL™ is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
-
+ 
 SooSL™ is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
-
+ 
 You should have received a copy of the GNU General Public License
 along with SooSL™.  If not, see <http://www.gnu.org/licenses/>.
 """
@@ -45,12 +45,12 @@ def byCode(code):
     else:
         _type = 'none_type'
     return _type
-
+    
 def possibleCatCodes(category): #not all codes in range are used
     if category == 'handshape':
         return [i for i in list(range(256, 517))]
     elif category == 'facehead':
-        return [i for i in list(range(767, 880))]
+        return [i for i in list(range(767, 880))]    
     elif category == 'signtype':
         return [i for i in list(range(4096, 4112))]
     elif category == 'changenature':
@@ -66,11 +66,11 @@ def possibleCatCodes(category): #not all codes in range are used
         return [i for i in list(range(1280, 4095))]
     else:
         return []
-
+    
 def sortOrder(code):
     _type = byCode(code)
     if _type == 'signtype': #4 character codes
-        return eval("0x1{}".format(code))
+        return eval("0x1{}".format(code)) 
     elif _type == 'handshape': #3 character codes
         return eval("0x20{}".format(code))
     elif _type == 'location': #3 location codes
@@ -78,10 +78,10 @@ def sortOrder(code):
     elif _type in ['changenature', 'changelocation', 'changemanner', 'contact']: #4 character codes
         return eval("0x4{}".format(code))
     elif _type == 'facehead': #3 character codes
-        return eval("0x50{}".format(code))
+        return eval("0x50{}".format(code)) 
     else:
         return eval("0x60fff") # place any errors at end of list
-
+    
 def changeLocationCode():
     return '1012'
 
@@ -95,8 +95,8 @@ def motionLabelCode():
     return '1010'
 
 def faceheadLabelCode():
-    return '32a'
-
+    return '32a'    
+    
 def  handshapeGroupCode(code):
     dec = eval('0x{}'.format(code))
     if dec < 270:
@@ -117,3 +117,6 @@ def  handshapeGroupCode(code):
         return '1cd'
     elif dec < 517:
         return '1f5'
+    
+    
+    

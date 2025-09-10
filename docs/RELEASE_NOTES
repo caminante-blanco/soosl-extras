@@ -1,0 +1,66 @@
+## [0.9.4.250802] - 2025-08-02
+### Added
+- Documents and download folders added to sidebar of file dialogs.
+- Linux builds are now self-contained. Larger download file, but few system dependencies apart from VLC and FFmpeg.
+- A reminder dialog at startup if there is saved feedback to send, as there was already for error/crash reporting. (SOOS-32)
+- File locks (used when editing) now differentiate between multiple users and/or SooSL instances on same computer.
+- Error and crash reports recorded to website; this works around issue with sending large reports to development team. (SOOS-170)
+- Error and crash reporting updated to make use of JSON format for files.
+- When SooSL starts, operating system and version details are uploaded and recorded to website to aid in future development. 
+  NO USER DETAILS are included with this upload.
+- Fixed issues with removing expired lockfiles left behind after crashes during editing or uploading. (SOOS-264)
+- Alter appearance of dialect icon when dialect filter is active. (SOOS-135)
+- Alter appearance of search and filter icons when parameter search is active. (SOOS-135)
+- Fixed issues with finder list while editing - keep showing only glosses for sign being edited (for now).
+- Automated download of updated help files. (SOOS-325)
+- Using HTML for Help files across all operating systems. (No more CHM file for Windows and Linux.)
+- Add version information to executable for Windows.(displayed in Properties >> Details for executable file)
+- Better icon for filtered/un-filtered finder list. (SOOS-135)
+- Search icon moved above finder list. Edit sign and New sign icons order reversed. (SOOS-304)
+- Dictionary project location (folder) added to startup window. (SOOS-267)
+- Enable selecting of texts (gloss, sentence, notes) for copy-to-clipboard while viewing sign. (SOOS-88)
+- Note fields only show if there are additional notes to display for a sign; '???' no longer used to mark empty text fields.
+  (SOOS141)
+- ZooZL files can now be imported and opened through the "Open Dictionary" dialog. (SOOS-173)
+- Limit video/image filenames to 100 characters. (SOOS-310) Long filenames causing problems with upload to website.
+- Newer translation files will be downloaded from the SooSL website if available, including completely new language translations.
+  (SOOS-299)
+- Country flags removed from translation language lists. (SOOS-321)
+- Text in translation language lists consists of language code and language display name. (SOOS-321)
+- Language display name included in translation file. (SOOS-321)
+- Above three points mean that gui translations can now be just one file instead of a directory of three files. (SOOS-321)
+- Lightbulb icon in main toolbar initially "on"; controls whether larger pictures of handshapes are available ("on") or not
+  ("off"). (SOOS-305) User's selection remembered between sessions.
+- Add a project logo to dictionary. (SOOS-231)
+- Improve "About Dictionary" dialog: whole page scrolls if long description; logo at top. (SOOS-231)
+- Add dictionary creator's name to project information. (SOOS-231)
+- Improved progress dialogs when importing, exporting and opening large dictionaries.
+- Search dialog remains open during editing.
+- Updated copyrights to 2025.
+- Updated gui translations for Spanish, French and Romanian.
+- Added gui translations for Chinese (traditional and simplified).
+- Updated wording for error and crash reports.
+- Change from \u0000 format display of Unicode text in json files to utf-8 encoding to make 
+  non-ASCII characters human-readable (in most editors).
+- Dictionaries opened in SooSL 0.9.4 (this version) cannot be opened by older versions due to above change.
+- Updated importing and exporting to zoozl.
+- Dictionaries exported from SooSL 0.9.4 (this version) cannot be imported to older versions due to above change.
+- Finding a dictionary project to open using the full file dialog ("Other" option in SooSL file dialog) 
+  will now return the higher-level project folder if a sub-folder of a project is chosen.
+- [macOS] Now built under version 15 Sequoia.
+- Improved SooSL update method. For future versions, only requires upload of latest version and release notes to 
+  dedicated folder on website.
+
+### Fixed (this version)
+- freezes and crashes when editing with invalid search filter.
+- file locks removed during normal program closure if editing.
+- Web upload bug where project only has only one variant [public or private]. 
+  Canceling upload would simply cancel and discard uploaded signs without the option to keep them and 
+  resume the upload later.
+- Export of project included two inventories.
+- When overwriting a project on import, checking the replace checkbox now hides overwrite warning.
+- Sorting word list by dialects; incorrectly dealing with numbers in gloss.
+- [macOS] Help files were not launching under MacOS Monterey.
+- [macOS] Ok button in dialect filter dialog now appears enabled (blue) when dialect selection changes.
+- [Linux] Fixed sizing issue causing errors on Linux versions: Ubuntu Jammy Jellyfish and Debian Bullseye.
+

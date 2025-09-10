@@ -1,0 +1,27 @@
+Source: soosl
+Maintainer: Timothy Grove <tim_grove@sil.org>
+Section: contribEducation
+Priority: optional
+Build-Depends: debhelper (>= 10), dh-python, python3-all, python3-setuptools
+X-Python3-Version: >= 3.6
+Standards-Version: 4.1.2
+Homepage: https://www.soosl.net
+
+Package: soosl
+Section: contrib/education
+Priority: optional
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}, ibus, vlc, ffmpeg, gnome-keyring
+Homepage: https://www.soosl.net
+Description: Application for creating and viewing sign language dictionaries.
+ SooSL allows the creation of sign language dictionaries for any
+ sign language in the world; it also acts as a viewer for the
+ dictionaries it creates. 
+ .
+ You can add videos for signs, example sentences, and comments;
+ along with grammatical information. Signs can be looked up by
+ handshape, location, motion, or gloss. Glosses can be added in
+ multiple written languages.
+ .
+ Versions are also available for Windows, MacOS and the Internet. 
+ (https://web.soosl.net)

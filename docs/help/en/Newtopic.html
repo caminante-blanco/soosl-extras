@@ -1,0 +1,126 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<title>Open files across a local area network (LAN) (D)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 9.9.0.637">
+	<meta name="description" content="SooSL: Easy sign language dictionaries!" /> 
+	<meta name="keywords" content="">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #00FFFF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Newtopic");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Open files across a local area network (LAN) (D)</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="ManagedictionaryprojectsD.html">Manage dictionary projects (D)</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="ManagedictionaryprojectsD.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="LocateDirectoryDialog.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Shareadictionaryprojectwithother.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p class="rvps2"><span class="rvts6">Maybe you want to use SooSL to open files on another computer across a local network (LAN). This can be helpful if you </span><a class="rvts15" href="Worktogetheronadictionaryproject.html">work together</a><span class="rvts6"> on a dictionary project with other people. You can keep all the files for the dictionary on one computer, and each person can access them from their own computer.</span></p>
+<p class="rvps14"><span class="rvts57">First, be careful! There is a bug in version 0.9.1 and earlier versions that will delete all the files in a project if you try to open a project across a local network using a network path. If you want to open a dictionary project across a network with these older versions, first map the shared folder to a drive letter (Windows) or mount the shared folder in the normal file system (Mac/Linux). Then, open the project with the local path. Don't try to open the project by typing a network path. This bug is fixed in version 0.9.2, but we still recommend doing things by mounting the folder locally first.&nbsp;</span></p>
+<p class="rvps2"><span class="rvts22">SooSL's special dialogs for </span><a class="rvts15" href="OpenadictionaryprojectD.html">open</a><span class="rvts57">, </span><a class="rvts15" href="ImportadictionaryprojectD.html">import,</a><span class="rvts57"> </span><a class="rvts15" href="ExportadictionaryprojectD.html">export,</a><span class="rvts6"> and </span><a class="rvts15" href="DeleteadictionaryprojectD.html">delete</a><span class="rvts57"> </span><span class="rvts22">do not normally show network locations. If you try to type a network address (such as "//server/SooSL" or "smb://server/SooSL") in "Look in:", it probably won't work. (This may change in future versions.) These dialogs only show locations on the local computer. Depending on what you want to do, here is what we recommend:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <li class="rvps5 noindent"><span class="rvts20">If you want to </span><a class="rvts13" href="OpenadictionaryprojectD.html">open</a><span class="rvts20"> a project that is on another computer on your network: It is best (safest) if you first create a network share on the other computer. Share a folder that contains the SooSL project folder. SooSL will work much faster if you share the folder that is immediately above the project folder (not the project folder itself). Then on the computer where you want to run SooSL, map that share to a local drive letter (Windows), or mount it in the regular file system (Mac/Linux). Finally, open SooSL, and use that local drive letter or mount point to open the dictionary.</span></li>
+ <ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+  <li class="rvps8 noindent"><span class="rvts20">On Linux, it seems to be necessary for the root user to mount the network share with read-write permissions for all users (or give ownership to the user that wants to use SooSL). SooSL does not seem to work correctly (videos are not visible) if an ordinary user mounts a network share in "user-space" (i.e., gvfs, which is what happens if you mount a network share using a file manager like Nemo, Thunar, or Dolphin). We suggest adding a line like this to the /etc/fstab file, using cifs (samba) to mount the share:</span><br/><span class="rvts20">//host/share&nbsp;</span><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts20">/mnt/mountpoint&nbsp;</span><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts20">cifs</span><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts20">vers=3.11,soft,uid=1000,gid=1000,cifsacl &nbsp;</span><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts20">0</span><span class="rvts20"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts20">0</span><br/><span class="rvts20">Substitute the user's numeric ID for 1000. Add other mount options as needed on your system, e.g. credentials. (This fstab line, of course, assumes that you also have an empty directory /mnt/mountpoint with 777 permission.)</span></li>
+ </ul>
+ <li class="rvps5 noindent"><span class="rvts20">If you want to </span><a class="rvts13" href="ImportadictionaryprojectD.html">import</a><span class="rvts20"> a project from another computer on your network: It is best (safest) if you first copy the </span><span class="rvts43">ZooZL file</span><span class="rvts20"> to your local hard drive. Then, import it from the local copy.</span></li>
+ <li class="rvps5 noindent"><span class="rvts20">If you want to </span><a class="rvts13" href="ExportadictionaryprojectD.html">export</a><span class="rvts20"> your dictionary project to another computer on your network: It is safest if you first export the project to a </span><span class="rvts43">ZooZL file</span><span class="rvts20"> on your local computer. Then copy the </span><span class="rvts12">ZooZL file</span><span class="rvts20"> to the other computer.</span></li>
+ <li class="rvps5 noindent"><span class="rvts20">If you want to </span><a class="rvts13" href="DeleteadictionaryprojectD.html">delete</a><span class="rvts20"> a dictionary project that is stored on another computer, it is safest to open SooSL on that other computer and delete the project there. (Or, i</span><span class="rvts12">f you know </span><a class="rvts13" href="SooSLprogramandprojectfilesD.html">where the project is stored</a><span class="rvts12">, you can use the normal operating system tools to delete the project folder and all the files in it.)</span></li>
+</ul>
+<p class="rvps2"><span class="rvts6">You can, if you want, use the </span><a class="rvts15" href="LocateDirectoryDialog.html">Locate (Dictionary) Directory dialog</a><span class="rvts6"> to open network locations directly, without mounting them first. (On some operating systems, this may mount the network share temporarily.) However, we recommend you do things the way we describe above. They are faster and more reliable.</span></p>
+<p class="rvps2"><span class="rvts22">For more information, see the section about LANs in the topic on how to </span><a class="rvts15" href="Worktogetheronadictionaryproject.html#LAN">work together on a project</a><span class="rvts22">.</span><span class="rvts6"></span></p>
+<p class="rvps7" style="clear: both;"><span class="rvts16">Created with the Personal Edition of HelpNDoc: </span><a class="rvts17" href="https://www.helpndoc.com/step-by-step-guides/how-to-convert-a-word-docx-file-to-an-epub-or-kindle-ebook/">From Word to ePub or Kindle eBook: A Comprehensive Guide</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				SooSL&trade; is copyright &copy; 2009 - 2025 by SIL International. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

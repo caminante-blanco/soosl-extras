@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=SooSL
+GenericName=sign language application 
+Comment=create and view sign language dictionaries
+Exec=/usr/bin/soosl
+Icon=/usr/share/icons/hicolor/36x36/soosl.png
+Terminal=false
+Categories=Education;Office
+Name[en_GB]=SooSL

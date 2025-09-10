@@ -1,0 +1,89 @@
+﻿Source files for building SooSL-0.9.4_250802
+============================================
+Source files for Windows, macOS and Linux/Debian
+
+SooSL-0.9.4_250802-source.zip
+-----------------------------
+Source files for SooSL. Unzip this file first.
+
+FFmpeg (http://ffmpeg.org/download.html)  (NOT snap or flatpak)
+----------------------------------------
+macOS: ffmpeg_osx.zip 
+win32: ffmpeg_win32.zip 
+Linux/Debian: sudo apt install ffmpeg
+
+SooSL uses a pre-built binary of FFmpeg for transcoding.
+It is unmodified other than renaming to soosl_ffmpeg.
+
+Depending on which platform(s) you are bulding for,
+unzip one or both of the above files and add to the
+SooSL directory. Newer versions may be available but
+are untested.
+
+VLC (http://www.videolan.org/vlc/)  (NOT snap or flatpak)
+----------------------------------
+macOS: vlc_macos.zip
+win32: vlc_win32.zip
+Linux/Debian: sudo apt install vlc
+
+SooSL uses pre-built libraries from the binary
+version of the VLC video player. (libvlc, libvlccore, plugins)
+
+Depending on which platform(s) you are bulding for,
+unzip one or both of the above files and add the contents to the
+SooSL directory. Newer versions may be available but
+are untested.
+
+
+Software Prerequisites
+======================
+
+Windows
+-------
+
+Binary installers:
+
+1. Python 3.8.10 (Windows x86 executable installer)
+https://www.python.org/downloads/release/python-3810/
+(include 'pip' and add python to path)
+(Newer versions are available, but this keeps SooSL compatible with Windows 7.)
+
+Working from the command line, change into the source file directory and istall 
+the requirements for Windows using "pip" (included with python):
+
+2. "pip install -r requirements_win32.txt"
+
+
+macOS
+----------------
+
+1. Python 3.7.9
+https://www.python.org/downloads/mac-osx/
+Download and run the Mac OS X 64-bit installer.
+
+Working from the command line, change into the source file directory and istall 
+the requirements for Windows using "pip" (included with python):
+
+2. "pip install -r requirements_macos.txt"
+
+
+Linux/Debian
+-----------------
+1. Use Python3 version already installed.
+
+2. "pip install -r requirements_linux.txt"
+
+(NOTE: requirements_???.txt can be edited with any text editor; leave off the 
+'==version_number' after module names (if any) to use newer versions; these numbers 
+represent the package versions used to build this version of SooSL.)
+
+
+
+Launching with Python 
+=============================================
+Working in a console/terminal window, change your working directory to the source code directory
+and type:
+
+"python3 soosl.py"
+
+

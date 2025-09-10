@@ -1,0 +1,241 @@
+soosl (0.9.4.250802) SOOSLDISTRIB; urgency=medium
+
+  * Added
+   - Documents and download folders added to sidebar of file dialogs.
+   - Linux builds are now self   -contained. Larger download file, but few system dependencies apart from VLC and FFmpeg.
+   - A reminder dialog at startup if there is saved feedback to send, as there was already for error/crash reporting. (SOOS   -32)
+   - File locks (used when editing) now differentiate between multiple users and/or SooSL instances on same computer.
+   - Error and crash reports recorded to website; this works around issue with sending large reports to development team. (SOOS   -170)
+   - Error and crash reporting updated to make use of JSON format for files.
+   - When SooSL starts, operating system and version details are uploaded and recorded to website to aid in future development.
+NO USER DETAILS are included with this upload.
+   - Fixed issues with removing expired lockfiles left behind after crashes during editing or uploading. (SOOS   -264)
+   - Alter appearance of dialect icon when dialect filter is active. (SOOS   -135)
+   - Alter appearance of search and filter icons when parameter search is active. (SOOS   -135)
+   - Fixed issues with finder list while editing    - keep showing only glosses for sign being edited (for now).
+   - Automated download of updated help files. (SOOS   -325)
+   - Using HTML for Help files across all operating systems. (No more CHM file for Windows and Linux.)
+   - Add version information to executable for Windows.(displayed in Properties >> Details for executable file)
+   - Better icon for filtered/un   -filtered finder list. (SOOS   -135)
+   - Search icon moved above finder list. Edit sign and New sign icons order reversed. (SOOS   -304)
+   - Dictionary project location (folder) added to startup window. (SOOS   -267)
+   - Enable selecting of texts (gloss, sentence, notes) for copy   -to   -clipboard while viewing sign. (SOOS   -88)
+   - Note fields only show if there are additional notes to display for a sign; '???' no longer used to mark empty text fields.
+(SOOS141)
+   - ZooZL files can now be imported and opened through the "Open Dictionary" dialog. (SOOS   -173)
+   - Limit video/image filenames to 100 characters. (SOOS   -310) Long filenames causing problems with upload to website.
+   - Newer translation files will be downloaded from the SooSL website if available, including completely new language translations.
+(SOOS   -299)
+   - Country flags removed from translation language lists. (SOOS   -321)
+   - Text in translation language lists consists of language code and language display name. (SOOS   -321)
+   - Language display name included in translation file. (SOOS   -321)
+   - Above three points mean that gui translations can now be just one file instead of a directory of three files. (SOOS   -321)
+   - Lightbulb icon in main toolbar initially "on"; controls whether larger pictures of handshapes are available ("on") or not
+("off"). (SOOS   -305) User's selection remembered between sessions.
+   - Add a project logo to dictionary. (SOOS   -231)
+   - Improve "About Dictionary" dialog: whole page scrolls if long description; logo at top. (SOOS   -231)
+   - Add dictionary creator's name to project information. (SOOS   -231)
+   - Improved progress dialogs when importing, exporting and opening large dictionaries.
+   - Search dialog remains open during editing.
+   - Updated copyrights to 2025.
+   - Updated gui translations for Spanish, French and Romanian.
+   - Added gui translations for Chinese (traditional and simplified).
+   - Updated wording for error and crash reports.
+   - Change from \u0000 format display of Unicode text in json files to utf   -8 encoding to make
+non   -ASCII characters human   -readable (in most editors).
+   - Dictionaries opened in SooSL 0.9.4 (this version) cannot be opened by older versions due to above change.
+   - Updated importing and exporting to zoozl.
+   - Dictionaries exported from SooSL 0.9.4 (this version) cannot be imported to older versions due to above change.
+   - Finding a dictionary project to open using the full file dialog ("Other" option in SooSL file dialog)
+will now return the higher   -level project folder if a sub   -folder of a project is chosen.
+   - [macOS] Now built under version 15 Sequoia.
+   - Improved SooSL update method. For future versions, only requires upload of latest version and release notes to
+dedicated folder on website.
+
+  * Fixed (this version)
+   - freezes and crashes when editing with invalid search filter.
+   - file locks removed during normal program closure if editing.
+   - Web upload bug where project only has only one variant [public or private].
+Canceling upload would simply cancel and discard uploaded signs without the option to keep them and
+resume the upload later.
+   - Export of project included two inventories.
+   - When overwriting a project on import, checking the replace checkbox now hides overwrite warning.
+   - Sorting word list by dialects; incorrectly dealing with numbers in gloss.
+   - [macOS] Help files were not launching under MacOS Monterey.
+   - [macOS] Ok button in dialect filter dialog now appears enabled (blue) when dialect selection changes.
+   - [Linux] Fixed sizing issue causing errors on Linux versions: Ubuntu Jammy Jellyfish and Debian Bullseye.
+
+ -- Timothy Ward Grove (SooSL Developer) <tim_grove@sil.org>  Mon, 18 Aug 2025 10:18:21 +0000
+
+soosl (0.9.2.210921) SOOSLDISTRIB; urgency=medium
+
+  * Fixed
+   - New signs no longer create an empty JSON file which caused errors when editing grammar categories, dialects or written languages.
+   - Exiting editing mode sometimes selected the topmost gloss in the finder list instead of the current one being edited.
+   - Improved sorting of words in finder list, when gloss strings contain numbers.
+   - Sorting based on first letter unless gloss is a single word starting with a number.
+   - Remember last opened media file folder, last opened project folder and last opened import/export folder.
+   - Problem with setting search language solved.
+   - After deleting extra videos/pictures from sign, the associated media file(s) were not being deleted after the project closed.
+   - Better default widths for Gloss & Dialect columns in finder list columns.
+   - Video window "detaching" from main window and not scaling properly when adjusting system scale factor for a screen.
+     (seen on a 4k 3840x2160 resolution monitor, but also on regular screens)
+   - Update to help files. (Terms of service)
+
+ -- Timothy Ward Grove (SooSL Developer) <tim_grove@sil.org>  Sat, 25 Sep 2021 13:31:46 +0000
+
+soosl (0.9.2) SOOSLDISTRIB; urgency=medium
+  * Added
+   - Network support added for group working over a local area network (LAN).
+   - Project directories renamed to prevent bug in versions older than 0.9.2 from deleting media files.
+   - Removal or replacement of certain characters from media filenames in order to prevent conflicts
+      when sharing dictionary projects in different desktop, web and network scenarios.
+   - Inventory of files taken when exporting dictionary projects to ZooZL files. (*.zoozl)
+   - Many of these changes help lay the foundation for project merging and publishing to WebSooSL;
+      new features to come in future versions.
+   - Help files have been completely rewritten.
+   - Help files are also available online: https://www.soosl.net/help/en/index.html.
+   - The count of signs in a dictionary has moved from bottom-left of the main window into the window displayed by 
+      the 'About dictionary' tool.
+   - Dialogs that have shown sign counts now also show sense and gloss counts, if appropriate.
+   - 'About SooSL' tool now opens the help files to the 'About SooSL' page.
+      ('Thanks' and 'Team' information now included in the help files.)
+   - Startup dialog shows more progress information.
+   - More information shown in file dialogs when opening, importing or exporting dictionaries to help identify 
+      dictionary projects correctly.
+   - French now included as an interface language option.
+   - Tool icons for showing sign parameters and sign information are now both displayed together in the toolbar.
+   - Tool icons for switching between photo and signwriting handshapes are now both displayed together in the toolbar.
+   - The term 'components' used in tooltips changed to 'parameters'.
+   - The term 'project' used in tooltips changed to 'dictionary' or 'dictionary project'.
+   - Fix location parameter sign counts in Search dialog and sign editing display.
+   - Remove unused location parameters and sign counts from normal sign display.
+   - Fixed a number of issues causing program crashes.
+   - Fixed duplication of signs and dialects following crashes.
+   - Python updated. Windows --> 3.8.10
+   - VLC updated. Windows and macOS --> 3.0.12
+
+  -- Timothy Ward Grove (SooSL Developer) <tim_grove@sil.org>  Sat, 28 Aug 2021 13:31:46 +0000
+
+soosl (0.9.1.210210) SOOSLDISTRIB; urgency=medium
+
+  * Changed
+   - Corrected gpg signing successfully
+
+ -- Timothy Ward Grove (SooSL Developer) <tim_grove@sil.org>  Wed, 10 Feb 2021 16:36:16 +0000
+
+soosl (0.9.1.210209) SOOSLDISTRIB; urgency=medium
+
+  * Changed
+   - Fix for Linux using Python3.6; dateutils<2.7 not able to parse isoformat strings
+
+ -- Timothy Ward Grove (SooSL Developer) <tim_grove@sil.org>  Wed, 10 Feb 2021 15:50:23 +0000
+
+soosl (0.9.1.210208) SOOSLDISTRIB; urgency=medium
+
+  * Changed
+   - Correct dependency for Linux; python-dateutil -> python3-dateutil
+
+ -- Timothy Ward Grove (SooSL Developer) <tim_grove@sil.org>  Mon, 08 Feb 2021 09:30:58 +0000
+
+soosl (0.9.1) SOOSLDISTRIB; urgency=medium
+
+  * Added
+   - Bugfix release.
+   - Fixed video loading and flickering issues.
+   - Black video surround replaced with white background.
+   - Now able to change interface language without restarting application.
+   - Amendments to project file format to facilitate future merging and publish features.
+
+ -- Timothy Ward Grove (SooSL Developer) <tim_grove@sil.org>  Fri, 05 Feb 2021 14:05:06 +0000
+
+soosl (0.9.0.5.0) SOOSLDISTRIB; urgency=medium
+
+  * Changed
+   - Change to a more generic version number.
+     (-0=generic deb; -1=xenial; -2=bionic; -3=focal)
+   - Removed button which gave access to full file dialog from import/export/open project dialogs.
+     (caused freezes on Gtk based systems; doesn't give access to network locations on Linux anyway.)
+
+ -- Timothy Ward Grove (SooSL Developer) <tim_grove@sil.org>  Tue, 13 Oct 2020 14:50:00 +0100
+
+soosl (0.9.0.4-1ubuntu2) SOOSLDISTRIB; urgency=medium
+
+  * Added
+   - Web version has been launched (soosl.net/web), providing a path to dictionary publishing online. 
+     Contact us if you are interested.
+   - A project ID was added to the data stored about a project. It is created using the name given to the 
+     project when it was first created. This is used to identify the project and to name its directory structure.
+     It will remain unchanged even if a project is renamed, copied, imported or exported.
+   - The name of the sign language for the project is now recorded when the project is created; 
+     previously it was only available as part of the project name, and then only if the creator remembered to include it.
+     There is a new field in the 'Create New Project' dialog for this purpose; also a new small dialog appears when 
+     opening an old project in order to add the sign language name.
+   - Dialogs for opening projects have been improved to show the project name, file name, file size and date when the 
+     project was last changed; also shows whether or not a project can be edited (locked/un-locked icon).
+   - When importing an existing project, there is an option to change the project directory, replace the old copy of the 
+     project or make a new copy. The option to rename a project on import by manually renaming .zoozl file has been removed.
+   - Projects can now be renamed through the 'About project' option in the tools menu. (This does not affect the filename.)
+     The filename for a copy is programmatically generated based on the project ID. (The project ID remains unchanged.)
+   - Some formatting can now be added to a project's description using html through the 'About project' option.
+   - Sign counts have been added for indexing by location.
+   - Improved error detection, reporting and recovery; crash detection now works again.
+   - Cancel button added to startup dialog.
+   - 'Close project' option added to the tools menu.
+  * Changed
+   - Sign data storage was changed from a SQLite database to JSON text file, making it easier to share data 
+     with the web version and laying the foundation for further collaborative uses.
+   - Major version change from 0.8.10 to 0.9.0 due to change from SQLite to JSON.
+     Older projects will update to work with this version of SooSL, but new projects will not work with older versions.
+   - Amendments and fixes to program code to accommodate the change to JSON file format.
+   - Fixed interface translations for Romanian.
+
+ -- Timothy Ward Grove (SooSL Developer) <tim_grove@sil.org>  Fri, 25 Sep 2020 08:05:00 +0100
+
+soosl (0.8.9~181117-1) SOOSLDISTRIB; urgency=medium
+
+  * First release for Linux packaged as .deb file.
+  * Added
+   - automatic keyboard switching when changing between text fields of 
+     differing languages.
+  * Changed
+   - large projects now open much faster.
+   - updated copyright dates and other text in the 'About SooSL' dialog.
+   - updated Python version >= 3.6. (xenial remains at >=3.5)
+   - updated PyQt5 version >= 5.10. (xenial remains at >=5.5)
+
+ -- Timothy Ward Grove (SooSL Developer) <tim_grove@sil.org>  Mon, 15 Oct 2018 17:40:10 +0100
+
+soosl (0.8.8) SOOSLDISTRIB; urgency=medium
+
+  * Released as source code, downloadable from <https://soosl.net/software.html>.
+   - required Python3 and other prerequisites to run from terminal.
+  * Added
+   - New controls for video playback (speed, and seek slider) available
+     for both video viewers.
+   - Support added for more image formats: GIFs, animated GIFs, SVG.
+   - Ability to set font for written text languages.
+   - French text added to the example project available on the website.
+  * Changed
+   - Changed available playback speeds to 1x, .75x, .5x, .25x.
+   - Search for signs by component now in a separate dialog box, 
+     creating a less confusing display.
+   - Moved Location indexing from under sign video window 
+     to the right-hand side of main SooSL window, to keep 
+     all indexing together in the same place on the screen.
+   - Changed the vertical column for viewing and indexing features
+     (components) to a horizontal row along the top of the right-hand
+     side of main SooSL window.
+   - Red overlay on videos that are marked for deletion (rather than 
+     blacking them out).
+   - Lower video/image viewer now has individual icons for each video or image.
+   - Changed transcoding settings to create more reasonable-sized videos
+     when saving, reducing overall size of project files.
+   - '###' item for showing or hiding unglossed signs moved from finder list
+     to toolbar above it.
+   - Unglossed signs now shown in finder list as blanks with gray background.
+   - General bug-fixes, giving SooSL better stability.
+  * Removed
+   - '???' no longer used in finder list to indicate unglossed signs.
+
+ -- Timothy W. Grove <tim_grove@sil.org>  Wed, 09 May 2018 16:20:43 +0100
