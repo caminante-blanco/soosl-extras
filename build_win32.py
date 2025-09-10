@@ -97,7 +97,7 @@ __output_dir__ = os.path.abspath('./InnoSetup')
 __copyright__ = '2009 - 2025'
 __exe_name__ = 'SooSL_{}.exe'.format(__version__.replace('.', ''))
 
-subprocess.call(['pyinstaller', 'win32.spec', '--noconfirm', '--onefile'])
+subprocess.call(['pyinstaller', 'win32.spec', '--noconfirm'])
 
 if deploy:
     # update InnoSetup script
