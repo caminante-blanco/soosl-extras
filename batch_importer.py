@@ -348,7 +348,7 @@ class Worker(QObject):
 
 
 class BatchImporterApp(QWidget):
-    def __init__(self):
+    def __init__(self, app):
         super().__init__()
         self.pm = app.pm
         self.initUI()
@@ -499,7 +499,7 @@ class BatchImporterApp(QWidget):
 def main():
     """Main function to run the Batch Importer application."""
     app = MyApp(sys.argv)
-    importer_window = BatchImporterApp()
+    importer_window = BatchImporterApp(app)
     importer_window.show()
     sys.exit(app.exec_())
 
