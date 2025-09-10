@@ -5,11 +5,11 @@ pycryptodome==3.10.1
 PyInstaller==5.9.0
 pyinstaller-hooks-contrib==2023.1
 pyparsing==3.0.9
-PyQt5==5.13.1
+PyQt5==5.14.0
 pywin32==300
 sip==5.2.0
 six==1.16.0
-python-slugify[Unidecode]==4.0.0 
+python-slugify[Unidecode]==4.0.0
 Unidecode==1.1.1
 pyuca==1.2
 python-dateutil
