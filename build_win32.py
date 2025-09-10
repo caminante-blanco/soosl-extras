@@ -4,7 +4,7 @@
 A script to assist in building the final Win32 application
 """
 #deploy = False
-deploy = True
+deploy = False
 deploy_at_home = False
 
 import os
@@ -97,7 +97,7 @@ __output_dir__ = os.path.abspath('./InnoSetup')
 __copyright__ = '2009 - 2025'
 __exe_name__ = 'SooSL_{}.exe'.format(__version__.replace('.', ''))
 
-subprocess.call(['pyinstaller', 'win32.spec', '--noconfirm'])
+subprocess.call(['pyinstaller', 'win32.spec', '--noconfirm', '--onefile'])
 
 if deploy:
     # update InnoSetup script
