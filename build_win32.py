@@ -31,7 +31,7 @@ def createReleaseNotes(version):
     release_notes_path = os.path.join(docs_dir, "RELEASE_NOTES")
     with open(release_notes_path, 'w', encoding='utf-8') as f:
         f.write(text)
-createReleaseNotes(__version__)
+# createReleaseNotes(__version__)
 
 def createVersionRC(version, build):
     MAJOR, MINOR, MICRO = version.split('.')
@@ -143,10 +143,12 @@ if deploy:
     f.write(new_iss)
     f.close()
 
-    if deploy_at_home:
-        # build InnoSetup installer
-        # InnoSetup path must be added environment variables (path) for the following to work
-        iss = os.path.abspath(iss)
-        print(iss)
-        subprocess.call(['iscc', iss])
-        print('complete')
+    # if deploy_at_home:
+    #     # The following command builds the InnoSetup installer.
+    #     # This is a local developer task and will fail in a standard CI environment
+    #     # where InnoSetup is not installed.
+    #     # InnoSetup path must be added environment variables (path) for the following to work
+    #     iss = os.path.abspath(iss)
+    #     print(iss)
+    #     subprocess.call(['iscc', iss])
+    #     print('complete')

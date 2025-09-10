@@ -40,29 +40,34 @@ if os.path.exists(__dist_dir__):
 
 subprocess.call(['pyinstaller', 'linux.spec', f'--workpath={__build_dir__}', f'--distpath={__dist_dir__}'])
 
-# move some things out of internal to soosl folder
-src_folder = f'{__dist_dir__}/soosl/_internal'
-dst_folder = f'{__dist_dir__}/soosl/'
-for pth in ['codes_convert.txt',
-        'codes_deprecate.txt',
-        'components',
-        'docs',
-        #'plugins',
-        #'ffmpeg_linux',
-        # 'libvlc.so.5',
-        # 'libvlccore.so.9',
-        # 'libvlc_pulse.so.0',
-        # 'libvlc_vdpau.so.0',
-        # 'libvlc_xcb_events.so.0'
-        ]:
-    try:
-        shutil.move(f'{src_folder}/{pth}', dst_folder)
-    except:
-         pass
-# remove some things that didn't get cleaned up before
-for pth in [f'{src_folder}/PyQt5/Qt5/qml',
-    f'{src_folder}/PyQt5/Qt5/translations']:
-        try:
-             shutil.rmtree(pth)
-        except:
-             pass
+# The following post-build file manipulation is likely redundant because
+# the new `linux.spec` file is configured to place data files in the correct
+# destination directory from the start. Commenting this out to rely on the
+# .spec file as the single source of truth for the build layout.
+
+# # move some things out of internal to soosl folder
+# src_folder = f'{__dist_dir__}/soosl/_internal'
+# dst_folder = f'{__dist_dir__}/soosl/'
+# for pth in ['codes_convert.txt',
+#         'codes_deprecate.txt',
+#         'components',
+#         'docs',
+#         #'plugins',
+#         #'ffmpeg_linux',
+#         # 'libvlc.so.5',
+#         # 'libvlccore.so.9',
+#         # 'libvlc_pulse.so.0',
+#         # 'libvlc_vdpau.so.0',
+#         # 'libvlc_xcb_events.so.0'
+#         ]:
+#     try:
+#         shutil.move(f'{src_folder}/{pth}', dst_folder)
+#     except:
+#          pass
+# # remove some things that didn't get cleaned up before
+# for pth in [f'{src_folder}/PyQt5/Qt5/qml',
+#     f'{src_folder}/PyQt5/Qt5/translations']:
+#         try:
+#              shutil.rmtree(pth)
+#         except:
+#              pass
