@@ -21,7 +21,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install PyQt5 pyinstaller pyuca
+        run: pip install -r requirements_macos.txt
 
       - name: Build the application
         run: python3 build_macos.py
