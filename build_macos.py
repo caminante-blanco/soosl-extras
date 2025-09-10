@@ -64,4 +64,5 @@ if os.path.exists(app) and os.path.exists('./PkgInfo'):
     # shutil.rmtree(app + '/Contents/Resources/include')
     # shutil.rmtree(app + '/Contents/Resources/lib')
 if os.path.exists(app) and os.path.exists('/Applications/App Wrapper 4.app'):
-    os.system('/Users/Shared/awhelper /Users/timothygrove/soosl\-desktop/dist/SooSL.app')
+    # os.system('/Users/Shared/awhelper /Users/timothygrove/soosl-desktop/dist/SooSL.app')
+    pass

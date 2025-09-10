@@ -67,7 +67,7 @@ excludes = [
     ]
 
 a = Analysis(['SooSL.py'],
-             pathex=['C:\\Users\\tim_g\\soosl-desktop'],
+             pathex=[],
              binaries=[],
              datas=added_files,
              hiddenimports=[],
