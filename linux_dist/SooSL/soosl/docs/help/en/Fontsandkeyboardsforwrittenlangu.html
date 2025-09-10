@@ -1,0 +1,130 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<title>Fonts and keyboards for written languages</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 9.9.0.637">
+	<meta name="description" content="SooSL: Easy sign language dictionaries!" /> 
+	<meta name="keywords" content="font, keyboard, IBus, keyboard switching, Linux, Wasta Linux, Ubuntu Linux, Unicode, written language, Keyman, GNU/Linux">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #00FFFF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Fontsandkeyboardsforwrittenlangu");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Fonts and keyboards for written languages</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Thewholedictionary.html">The whole dictionary</a> &rsaquo;&rsaquo; <a href="Writtenlanguages.html">Written languages</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Writtenlanguages.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="Writtenlanguages.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="Dialects.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p class="rvps2"><span class="rvts6">Getting a computer to work with a </span><a class="rvts15" href="Writtenlanguages.html">written language</a><span class="rvts6"> can be tricky.</span><span class="rvts45"> If you've already been using the language on your computer, you probably have everything you need, already installed.&nbsp;</span></p>
+<p class="rvps2"><span class="rvts45">But, it isn't always that easy. Suppose you get a dictionary project from someone else, or you view a dictionary in </span><span class="rvts6">SooSL Web</span><span class="rvts45">. It may use a different written language, one that you don't normally use. In that case, you may need to install a font to read the characters in that language. If you want to type in that language, you may need to install a keyboard.&nbsp;</span></p>
+<p class="rvps2"><span class="rvts45">Computers today usually have fonts and keyboards for many languages. Sometimes, though, they aren't installed.&nbsp;</span></p>
+<p class="rvps2"><span class="rvts45">First, you need a </span><span class="rvts51">font</span><span class="rvts45"> that can display all the characters in the language. If a font is not designed to work with a language, it may not have all the characters the language needs. Especially, if the language uses a non-roman script, you need a font that is designed to work with that script.&nbsp;</span></p>
+<p class="rvps2"><span class="rvts6">Most fonts today are built around </span><a class="rvts15" href="https://en.wikipedia.org/wiki/Unicode" target="_blank">Unicode</a><span class="rvts6">. Watch out for older fonts that don't use </span><span class="rvts51">Unicode</span><span class="rvts6">; they are harder to use. If you use a Unicode font, it will make it easier to share your dictionary project with other people.</span></p>
+<p class="rvps2"><span class="rvts6">Then you need a </span><span class="rvts51">keyboard</span><span class="rvts6"> that is designed to make it easy to type the characters in the language. If you use a Unicode font, you need a Unicode keyboard. If you have an older font that doesn't use Unicode, you will need a special keyboard for that font. The keyboard must match the font.</span></p>
+<p class="rvps2"><span class="rvts45">If there is no keyboard for a language available in </span><span class="rvts6">your operating system (Windows, Mac, or Linux), take a look at </span><a class="rvts15" href="http://keyman.com" target="_blank">Keyman</a><span class="rvts6">. It may have what you need.</span></p>
+<p class="rvps2"><span class="rvts45">In Linux, you might find some special problems.&nbsp;</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <li class="rvps5 noindent"><span class="rvts12">If you have any difficulties with automatic keyboard switching, then you can try turning it off. You do this in the dialog for </span><a class="rvts13" href="Writtenlanguages.html">written languages</a><span class="rvts12">. (Keyboard switching in Linux relies upon IBus, Intelligent Input Bus.)&nbsp;</span></li>
+ <li class="rvps5 noindent"><span class="rvts12">Sometimes in Linux, especially in Wasta-Linux (version 18.04), IBus appears to "lose" a language. You might expect to see a language in the keyboard language list in the Written Languages dialog, but it is missing. You can fix this problem by reinstalling IBus. Use your software package manager or open a terminal and run this command:&nbsp;</span></li>
+</ul>
+<p class="rvps23"><span class="rvts6">sudo apt-get install --reinstall ibus</span></p>
+<p class="rvps14"><span class="rvts6">Then restart your Linux system and your missing languages should return.</span></p>
+<p class="rvps18"><span class="rvts6"><br/></span></p>
+<p class="rvps18"><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts6"> &nbsp; &nbsp; &nbsp; &nbsp;</span><br/><span class="rvts6"><br/></span></p>
+<p class="rvps18"><span class="rvts45"><br/></span></p>
+<p class="rvps2"><span class="rvts45"></span><span class="rvts6"></span></p>
+<p class="rvps7" style="clear: both;"><span class="rvts16">Created with the Personal Edition of HelpNDoc: </span><a class="rvts17" href="https://www.helpndoc.com/feature-tour/create-ebooks-for-amazon-kindle">Full-featured Kindle eBooks generator</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				SooSL&trade; is copyright &copy; 2009 - 2025 by SIL International. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

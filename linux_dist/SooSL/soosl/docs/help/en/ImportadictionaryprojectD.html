@@ -1,0 +1,190 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<title>Import a dictionary from a ZooZL file (D)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 9.9.0.637">
+	<meta name="description" content="SooSL: Easy sign language dictionaries!" /> 
+	<meta name="keywords" content="import a dictionary project, open project, , USB data stick, , demonstration (demo) ASL dictionary project, ASL, zoozl file, , archives (zoozl, zip), detail view, OneDrive, Google Drive, file sharing (synchronization) service, Dropbox, open dictionary, permissions, project, project permissions, read-only project, read-write project, blank screen, no dictionary">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #00FFFF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("ImportadictionaryprojectD");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Import a dictionary from a ZooZL file (D)</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="GetstartedwithSooSL.html">Get started with SooSL</a> &rsaquo;&rsaquo; <a href="GetstartedwithSooSLDesktopD.html">Get started with SooSL Desktop (D)</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="GetstartedwithSooSLDesktopD.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="ThestartupdialogD.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="ExitSooSL.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p class="rvps2"><span class="rvts45">When you first start SooSL Desktop, you will probably see a blank screen with the Tools menu open in the upper right.</span></p>
+<p class="rvps14"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts21"><br/></span></p>
+<p class="rvps2"><span class="rvts45">The screen is blank because you haven't opened a dictionary yet. You need to open a dictionary before you will see anything interesting. This help topic tells how to get your first dictionary and start using it in SooSL. (Later, you can </span><a class="rvts15" href="StartanewdictionaryprojectD.html">make your own dictionary</a><span class="rvts45">.)</span></p>
+<p class="rvps2"><span class="rvts45">The menu has suggestions about what you can do next. What do you do first? The easiest thing is to import a dictionary someone else has made. You will get it in a file called a </span><span class="rvts51">ZooZL file</span><span class="rvts45">. A ZooZL file has a .zoozl extension in its file name, like this:&nbsp;</span></p>
+<p class="rvps14"><span class="rvts54">____file name____</span><span class="rvts45">.zoozl</span></p>
+<p class="rvps14"><span class="rvts45">For example: "Demo (ASL) 2020-12-29 (0.9.1).zoozl"</span></p>
+<p class="rvps2"><span class="rvts45">We use ZooZL files to move SooSL dictionaries from one computer to another. </span><span class="rvts6">A ZooZL file contains </span><a class="rvts15" href="SooSLprogramandprojectfilesD.html">all the individual files</a><span class="rvts6"> (videos, translations, etc.)</span><span class="rvts45"> that are needed for a dictionary, all packed into a single file. This makes it easy to move.</span></p>
+<p class="rvps2"><span class="rvts6">"Importing a dictionary project" means unpacking all the individual files from inside a ZooZL file into separate files</span><span class="rvts6"> that SooSL can work with. You have to import the dictionary from a ZooZL file into SooSL before you can see what is in it.</span></p>
+<p class="rvps2"><span class="rvts45">So, to start learning SooSL, it is good to import a ZooZL file. Here's what you do.</span></p>
+<h1 class="rvps4"><span class="rvts0"><span class="rvts46">Get a ZooZL file</span></span></h1>
+<p class="rvps2"><span class="rvts6">First, </span><span class="rvts21">get a ZooZL file.</span><span class="rvts6"> It will contain a dictionary that someone else has made</span><span class="rvts45">.&nbsp;</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <li class="rvps5 noindent"><span class="rvts12">Do you want a good way to learn SooSL? Get the Demo dictionary that we made for ASL. You can download it from </span><a class="rvts13" href="https://soosl.net/software.html" target="_blank">https://soosl.net/software.html</a><span class="rvts12">. </span><span class="rvts42">That's the same place where you download SooSL Desktop itself. There's a different version of the Demo dictionary for each version of SooSL Desktop. Get the one that matches the version of SooSL Desktop you have. (Or, better, just make sure you have the newest version of both SooSL Desktop and the Demo database.)</span></li>
+ <li class="rvps5 noindent"><span class="rvts12">Alternatively, get a ZooZL file from someone else for their dictionary. They can send it to you by email, through a file sharing service like Dropbox, Google Drive or OneDrive, or give it to you on a USB data stick.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts45">Save the ZooZL file to some convenient place on your computer</span><span class="rvts50">—</span><span class="rvts45">some place where you can find it again easily.&nbsp;</span></p>
+<h1 class="rvps4"><span class="rvts0"><span class="rvts46">Start SooSL</span></span></h1>
+<p class="rvps2"><span class="rvts45">Next, </span><span class="rvts21">start SooSL Desktop</span><span class="rvts6">.</span><span class="rvts6"> (The way you start it is different on </span><a class="rvts15" href="InstallrunupdateanduninstallSooS.html">Windows</a><span class="rvts6">, </span><a class="rvts15" href="InstallrunupdateanduninstallSoo1.html">Mac</a><span class="rvts6">, and </span><a class="rvts15" href="InstallrunupdateanduninstallSoo2.html">Linux</a><span class="rvts6">. See those help topics for instructions.)&nbsp;</span></p>
+<p class="rvps2"><span class="rvts6">After </span><a class="rvts15" href="ThestartupdialogD.html">SooSL starts</a><span class="rvts6">, it will ask you for the title of a dictionary project to open.&nbsp;</span></p>
+<p class="rvps14"><img alt="" style="width : 200px; height : 200px; padding : 1px;" src="lib/Dlg_StartupD.png"></p>
+<p class="rvps2"><span class="rvts6">However, you can't </span><span class="rvts40">open</span><span class="rvts6"> the ZooZL file quite yet; you have to </span><span class="rvts40">import</span><span class="rvts6"> it first. So, it doesn't matter what project you choose to start with. If you are using SooSL for the first time, just leave the choice as "No dictionary". </span><span class="rvts21">Click </span><img alt="" style="vertical-align: middle; padding : 1px;" src="lib/Button_Start.png"><span class="rvts6">.</span></p>
+<h1 class="rvps4"><span class="rvts0"><span class="rvts11">Import the dictionary project</span></span></h1>
+<p class="rvps2"><span class="rvts6">After SooSL starts and you see the blank screen, you can import the dictionary. </span><span class="rvts21">Click </span><img alt="graphic" style="vertical-align: middle;" src="lib/Icon_Wrench.png"><span class="rvts21"> Tools</span><span class="rvts6">. It is in the top-right corner of the SooSL window.&nbsp;</span></p>
+<p class="rvps14"><img alt="" style="width : 401px; height : 269px; padding : 1px;" src="lib/Screen_BlankMenu.png"></p>
+<p class="rvps2"><span class="rvts45">If the screen is completely blank, don't be discouraged! Just </span><span class="rvts21">click on the </span><img alt="" style="vertical-align: middle; padding : 1px;" src="lib/Icon_Wrench.png"><span class="rvts21"> Tools icon</span><span class="rvts45"> in the upper right corner to open the Tools menu.</span></p>
+<p class="rvps14"><img alt="" style="width : 400px; height : 255px; padding : 1px;" src="lib/Screen_Blank.png"></p>
+<p class="rvps2"><span class="rvts6">Then, </span><span class="rvts21">click </span><img alt="graphic" style="vertical-align: middle;" src="lib/Icon_Import.png"><span class="rvts21">&nbsp;Import dictionary</span><span class="rvts6">.&nbsp;</span></p>
+<p class="rvps14"><img alt="" style="padding : 1px;" src="lib/Toolbar_ToolsMenu_Import.png"></p>
+<p class="rvps2"><span class="rvts6">&nbsp;You will see a dialog like this.&nbsp;</span></p>
+<p class="rvps17"><img alt="" style="width : 700px; height : 306px; padding : 1px;" src="lib/Dlg_Import_Step1.png"></p>
+<p class="rvps2"><span class="rvts6">At the top, after "Import from:", it shows the path-name of a folder (directory). (Usually it will be the "exports" folder under your </span><a class="rvts15" href="SooSLprogramandprojectfilesD.html#userSooSLFolder">user SooSL folder</a><span class="rvts6">.)&nbsp;</span></p>
+<p class="rvps2"><span class="rvts6">In the big area on the right, it shows the ZooZL files in that folder.&nbsp;</span></p>
+<p class="rvps2"><span class="rvts6">To look for a ZooZL file in a different folder, start with the list of folders on the left. It includes generic locations like your desktop folder or your hard drive(s). </span><span class="rvts21">Click a folder or drive name</span><span class="rvts6"> on the left. The "Import from:" box will change to the path-name for that folder, and on the right you will see any ZooZL files in that folder. You will also see any sub-folders. </span><span class="rvts53">To change to one of those sub-folders, </span><span class="rvts21">double-click on it</span><span class="rvts53">, or choose it and </span><span class="rvts21">click </span><img alt="" style="vertical-align: middle; padding : 1px;" src="lib/Button_OpenFolder.png"><span class="rvts53">. Or, you can </span><span class="rvts21">type a folder name</span><span class="rvts53"> after "Import from:" at the top</span><span class="rvts53">.</span><span class="rvts21"> </span><span class="rvts53">Finally, you can also </span><span class="rvts21">use the arrows</span><span class="rvts53"> at the top right to move around between folders.&nbsp;</span></p>
+<p class="rvps2"><span class="rvts6">The names that you see on the right are actually the titles of the dictionaries inside each ZooZL file, not the ZooZL file's name. </span><span class="rvts21">Click </span><span class="rvts6">on one of the titles. At the bottom, after the words "ZooZL file:", you'll see the ZooZL file's actual file name. The title and the file name are usually similar, but not the same. Sometimes the same dictionary title appears more than once in the list on the right; this means there are different versions of the same dictionary, in separate ZooZL files.&nbsp;</span></p>
+<p class="rvps14"><img alt="" style="padding : 1px;" src="lib/Dlg_Import_Step1a.png"></p>
+<p class="rvps2"><span class="rvts6">Also at the bottom, you can see the title of the currently selected dictionary, its version, and when it was last modified.</span></p>
+<p class="rvps2"><span class="rvts45">If you want to see more information about the </span><span class="rvts6">different ZooZL files, including if you can change them, see </span><a class="rvts15" href="ImportadictionaryprojectD.html#DetailView">detail view</a><span class="rvts6"> below.</span></p>
+<p class="rvps2"><span class="rvts6">When you find the ZooZL file you want, </span><span class="rvts21">click the dictionary title </span><span class="rvts6">and then </span><span class="rvts21">click</span><span class="rvts47"> </span><img alt="graphic" style="vertical-align: middle;" src="lib/Button_Import.png"><span class="rvts45">. Or, just </span><span class="rvts21">double-click the dictionary title</span><span class="rvts45">.&nbsp;</span></p>
+<p class="rvps2"><span class="rvts45">Next, you will normally see a new dialog that tells you two things:&nbsp;</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <li class="rvps5 noindent"><span class="rvts42">information about the ZooZL file: title, file name, version, when modified</span></li>
+ <li class="rvps5 noindent"><span class="rvts42">the destination folder (directory) where the dictionary files will be put after it is unpacked&nbsp;</span></li>
+</ul>
+<p class="rvps2"><span class="rvts45">(If there is already a copy of a dictionary in the destination folder, the dialog will be </span><span class="rvts6">different. See </span><a class="rvts15" href="ImportadictionaryprojectD.html#AlreadyExists">below</a><span class="rvts6">.)</span></p>
+<p class="rvps18"><span class="rvts45"> &nbsp; &nbsp; &nbsp; &nbsp;</span><img alt="" style="padding : 1px;" src="lib/Dlg_Import_Step2.png"></p>
+<p class="rvps2"><span class="rvts45">The Dictionary location and the Dictionary folder name tell where SooSL will unpack and store </span><a class="rvts15" href="SooSLprogramandprojectfilesD.html">all the files for the dictionary project</a><span class="rvts6">. SooSL normally uses its </span><a class="rvts15" href="SooSLprogramandprojectfilesD.html">projects folder</a><span class="rvts6"> as the dictionary location, but you can put them anywhere you want. It normally suggests a Dictionary folder name, based on the dictionary's </span><span class="rvts51">Project ID</span><span class="rvts6">, but you can change it.</span></p>
+<p class="rvps2"><span class="rvts45">To change the Dictionary folder name, type a new name in place of the one suggested. If you want the dictionary to be stored in a different location, </span><span class="rvts21">click </span><img alt="" style="vertical-align: middle; padding : 1px;" src="lib/Icon_OpenFolder.png"><span class="rvts21"> Change</span><span class="rvts45">. </span><span class="rvts49">You will then see this dialog. You can use it to choose a new location where SooSL will unpack the dictionary project.</span></p>
+<p class="rvps14"><img alt="" style="width : 700px; height : 292px; padding : 1px;" src="lib/Dlg_Import_Location.png"></p>
+<p class="rvps2"><span class="rvts49">For example, you might want to store the dictionary project someplace else on your hard drive. You might want to store it in a special folder that automatically syncs </span><span class="rvts6">a </span><a class="rvts15" href="Keepsparecopiesbackupsofdictiona.html">spare copy</a><span class="rvts6"> to </span><span class="rvts49">cloud storage (Dropbox, Google Drive or OneDrive). You might even want it on a USB stick so you can easily work with the dictionary project on different computers. (See the help topic </span><span class="rvts6">about </span><a class="rvts15" href="Worktogetheronadictionaryproject.html">working together on a dictionary project</a><span class="rvts49">.) Choose the new dictionary location, then </span><span class="rvts21">click </span><img alt="" style="vertical-align: middle; padding : 1px;" src="lib/Button_SelectFolder.png"><span class="rvts49">.</span></p>
+<p class="rvps2"><span class="rvts49">If a dictionary with the same folder name already exists</span><a name="AlreadyExists"></a><span class="rvts49"> in the dictionary location, SooSL will warn you. The Import Dictionary dialog will change. The warning is in red.</span></p>
+<p class="rvps17"><img alt="" style="padding : 1px;" src="lib/Dlg_Import_Exists.png"></p>
+<p class="rvps2"><span class="rvts49">You have three choices:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <li class="rvps5 noindent"><span class="rvts52">Change the Dictionary location, to unpack the dictionary project someplace else. (</span><span class="rvts34">Click </span><img alt="" style="vertical-align: middle; padding : 1px;" src="lib/Icon_OpenFolder.png"><span class="rvts34"> Change.</span><span class="rvts12"> You will see the Choose Dictionary Location dialog. You can read about it </span><a class="rvts13" href="ImportadictionaryprojectD.html#Destination">above</a><span class="rvts12">.</span><span class="rvts52">)</span></li>
+ <li class="rvps5 noindent"><span class="rvts52">Change the Dictionary folder name.</span></li>
+ <li class="rvps5 noindent"><span class="rvts52">Replace the existing dictionary project. (</span><span class="rvts34">Click the </span><img alt="" style="vertical-align: middle; padding : 1px;" src="lib/Button_CheckboxNo.png"><span class="rvts34"> checkbox</span><span class="rvts52"> next to Replace.)&nbsp;</span></li>
+</ul>
+<p class="rvps2"><span class="rvts6">After you make your choice, </span><span class="rvts21">click </span><img alt="" style="vertical-align: middle; padding : 1px;" src="lib/Button_OK.png"><span class="rvts45"> and you will see a progress dialog while SooSL imports (unpacks) the files. When the import is finished, you will see a small dialog:</span></p>
+<p class="rvps17"><img alt="" style="padding : 1px;" src="lib/Dlg_Import_Complete.png"></p>
+<p class="rvps2"><span class="rvts21">Click </span><img alt="" style="vertical-align: middle; padding : 1px;" src="lib/Button_OK.png"><span class="rvts47"> </span><span class="rvts45">to continue.</span></p>
+<p class="rvps2"><span class="rvts6">If the imported dictionary does not open immediately,</span><span class="rvts45"> </span><span class="rvts21">click </span><img alt="graphic" style="vertical-align: middle;" src="lib/Icon_Wrench.png"><span class="rvts21"> Tools &gt; </span><img alt="graphic" style="vertical-align: middle;" src="lib/Icon_OpenFolder.png"><span class="rvts21">&nbsp;Open project</span><span class="rvts45">.&nbsp; </span><a class="rvts15" href="OpenadictionaryprojectD.html">Find the dictionary</a><span class="rvts6"> </span><span class="rvts45">in the folder where you imported it (the Dictionary location), and </span><span class="rvts21">click </span><img alt="" style="vertical-align: middle; padding : 1px;" src="lib/Button_OK.png"><span class="rvts45">.</span></p>
+<p class="rvps2"><span class="rvts6">Then you can start </span><a class="rvts15" href="Signsinadictionary.html">reading and studying the signs</a><span class="rvts6"> in the dictionary.</span></p>
+<h1 class="rvps4"><a name="DetailView"></a><span class="rvts0"><span class="rvts11">Detail view</span></span></h1>
+<p class="rvps2"><span class="rvts45">When you are choosing a ZooZL file in the Import Dictionary dialog (above), if you want to see more information about the different ZooZL files, </span><span class="rvts21">click </span><img alt="" style="vertical-align: middle; padding : 1px;" src="lib/Icon_DetailView.png"><span class="rvts21"> Detail View </span><span class="rvts45">in the top-right corner of the dialog. Detail view shows more columns of information.</span></p>
+<p class="rvps14"><img alt="" style="width : 700px; height : 306px; padding : 1px;" src="lib/Dlg_Import_Details.png"></p>
+<p class="rvps2"><span class="rvts45">Detail view shows the following information:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <li class="rvps5 noindent"><span class="rvts42">Dictionary title: the title of the dictionary&nbsp;</span></li>
+ <li class="rvps5 noindent"><span class="rvts42">Icons that show if it is </span><img alt="" style="vertical-align: middle; padding : 1px;" src="lib/Icon_LockOpen.png"><span class="rvts42"> unlocked so you can change it, or if it is </span><img alt="" style="vertical-align: middle; padding : 1px;" src="lib/Icon_LockClosed.png"><span class="rvts42"> locked so you can only read it</span></li>
+ <li class="rvps5 noindent"><span class="rvts42">ZooZL file name: the name of the ZooZL file that contains the dictionary</span></li>
+ <li class="rvps5 noindent"><span class="rvts42">Project version: the version number, if there is one.</span></li>
+ <li class="rvps5 noindent"><span class="rvts42">Size: how big the ZooZL file is (so you can estimate how much extra hard disk space you will need)</span></li>
+ <li class="rvps5 noindent"><span class="rvts42">Date Modified: when the ZooZL file was exported</span></li>
+</ul>
+<h1 class="rvps4"><span class="rvts0"><span class="rvts46">Opening ZooZL files from network (LAN) locations</span></span></h1>
+<p class="rvps2"><span class="rvts6">The Import Dictionary dialog is special for SooSL, to make it easier to find and open ZooZL files. However, it doesn't give you full access to all files on your computer or on your local network (LAN). To import a dictionary from another computer across a local area network, see </span><a class="rvts15" href="Newtopic.html">this topic</a><span class="rvts6">.</span></p>
+<p class="rvps18"><span class="rvts45"></span><span class="rvts6"></span></p>
+<p class="rvps7" style="clear: both;"><span class="rvts16">Created with the Personal Edition of HelpNDoc: </span><a class="rvts17" href="https://www.helpndoc.com/step-by-step-guides/how-to-convert-a-word-docx-file-to-an-epub-or-kindle-ebook/">Maximize Your Reach: Convert Your Word Document to an ePub or Kindle eBook</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				SooSL&trade; is copyright &copy; 2009 - 2025 by SIL International. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+

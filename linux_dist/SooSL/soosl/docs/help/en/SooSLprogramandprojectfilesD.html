@@ -1,0 +1,210 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<title>SooSL program and project files (D)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 9.9.0.637">
+	<meta name="description" content="SooSL: Easy sign language dictionaries!" /> 
+	<meta name="keywords" content="zoozl file, project, dictionary project, JSON, mp4, file formats, directory structure, folder structure, archives (zoozl, zip), jpg, mov, soosl.ini, strange behavior, png, project name, settings, spare copies, Ubuntu Linux, Wasta Linux, Windows, Linux, Mac, Microsoft Windows, Apple Mac, GNU/Linux">
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #00FFFF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "index.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("SooSLprogramandprojectfilesD");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">SooSL program and project files (D)</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Miscellaneous.html">Miscellaneous</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Miscellaneous.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="KeyboardshortcutsD.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="CharactersinfilenamesD.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p class="rvps2"><span class="rvts6">This help topic is more technical. Most people can ignore it. This topic is for people who want to know more about how SooSL Desktop stores information on their computer.</span></p>
+<h1 class="rvps4"><span class="rvts0"><span class="rvts11">SooSL settings file</span></span></h1>
+<p class="rvps2"><span class="rvts6">SooSL keeps a settings file. It keeps track of how you use SooSL on your computer. It records things like window size, fonts, keyboards, the last dictionary you had open, etc. It applies to all your dictionaries and how you use them on a single computer.</span></p>
+<p class="rvps2"><span class="rvts6">The normal location for this file is:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <li class="rvps5 noindent"><span class="rvts12">Windows:</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">C:\Users\</span><span class="rvts92">__userName__</span><span class="rvts12">\AppData\Roaming\SIL\soosl.ini</span></li>
+ <li class="rvps5 noindent"><span class="rvts12">MacOS:</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts93">/Library/Preferences/org.sil.SooSL.plist &nbsp; &nbsp; (/Library is normally a hidden folder)</span></li>
+ <li class="rvps5 noindent"><span class="rvts12">Linux:</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts93">~/.config/SIL/SooSL.ini</span></li>
+</ul>
+<p class="rvps2"><span class="rvts6">You can edit this file with a text editor if you are careful. (Make a spare copy first!) Some of it is coded and hard to understand; if you don't understand something, leave it alone.&nbsp;</span></p>
+<p class="rvps2"><span class="rvts6">Over time, the soosl.ini file fills up with junk data. Sometimes this can make SooSL behave strangely. If this happens, try renaming the soosl.ini file to some other name. SooSL will then start over with a new set of settings in a new soosl.in file. You'll have to set things up again, such as how you have your screen arranged. That doesn't take very long. If you want to go back to your old settings, just rename the old file back to "soosl.ini".</span></p>
+<h1 class="rvps4"><span class="rvts0"><span class="rvts11">The </span></span><a name="userSooSLFolder"></a><span class="rvts0"><span class="rvts11">user's SooSL folder: log</span></span><a name="logFiles"></a><span class="rvts0"><span class="rvts11"> files, default location of dictionary projects and ZooZL files</span></span></h1>
+<p class="rvps2"><span class="rvts6">SooSL Desktop creates</span><span class="rvts72"> a folder (directory) called SooSL with your user files. The exact location depends on your computer. Typical locations are:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <li class="rvps5 noindent"><span class="rvts91">Windows:</span><span class="rvts91"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts91">c:\Users\</span><span class="rvts92">__userName__</span><span class="rvts91">\SooSL</span></li>
+ <li class="rvps5 noindent"><span class="rvts91">MacOS:</span><span class="rvts91"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts91">~/SooSL&nbsp;</span></li>
+ <li class="rvps5 noindent"><span class="rvts91">Linux:</span><span class="rvts91"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts91">~/SooSL</span></li>
+</ul>
+<p class="rvps2"><span class="rvts6">SooSL keeps its log files in the SooSL folder. If SooSL is not working right, there may be information in these log files that will help you identify the problem. Even if you don't understand them, you can send them to us when you </span><a class="rvts15" href="SupportContactusandsendfeedback.html">contact us</a><span class="rvts6">. They can help us figure out the problem.</span></p>
+<p class="rvps2"><span class="rvts6">Along with the log files, the SooSL folder also contains three </span><span class="rvts72">sub-folders:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <li class="rvps5 noindent"><span class="rvts91">.../SooSL/projects:&nbsp;</span><span class="rvts91"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts91">default parent folder for active </span><a class="rvts13" href="SetupanewprojectinSooSLD.html">dictionary projects</a></li>
+ <li class="rvps5 noindent"><span class="rvts91">.../SooSL/exports:&nbsp;</span><span class="rvts91"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts91">default location for </span><a class="rvts13" href="ExportadictionaryprojectD.html">exporting ZooZL files</a><span class="rvts91"> and for looking for ZooZL files to import</span></li>
+ <li class="rvps5 noindent"><span class="rvts91">.../SooSL/temp:&nbsp;</span><span class="rvts91"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts91">temporary files</span></li>
+</ul>
+<p class="rvps2"><span class="rvts6">These are the default locations for dictionary projects and ZooZL files. However, you can store </span><span class="rvts72">dictionary project files and ZooZL files</span><span class="rvts6"> any place on your computer. You can use the special SooSL file dialogs for </span><a class="rvts15" href="OpenadictionaryprojectD.html">Open dictionary</a><span class="rvts6">, </span><a class="rvts15" href="ImportadictionaryprojectD.html">Import dictionary</a><span class="rvts6">, </span><a class="rvts15" href="ExportadictionaryprojectD.html">Export dictionary</a><span class="rvts6"> and </span><a class="rvts15" href="DeleteadictionaryprojectD.html">Delete dictionary</a><span class="rvts6"> to access SooSL files in any folder on your computer. You can even use a folder on another computer through a </span><a class="rvts15" href="Newtopic.html">local area network (LAN)</a><span class="rvts6">.&nbsp;</span></p>
+<h1 class="rvps4"><span class="rvts0"><span class="rvts11">Sub-folders</span></span><a name="ProjectSubfolders"></a><span class="rvts0"><span class="rvts11"> inside SooSL dictionary projects</span></span></h1>
+<p class="rvps2"><span class="rvts6">SooSL stores its files inside the folder (directory) for the dictionary project:</span></p>
+<p class="rvps8"><span class="rvts41">&lt;__name__ &gt;</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63">←</span><span class="rvts65"> project folder</span></p>
+<p class="rvps22"><span class="rvts12">&lt;__name__ &gt;.json</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63">←</span><span class="rvts65"> main JSON file (information about the whole project)</span></p>
+<p class="rvps22"><span class="rvts41">_signs</span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts41"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63">←</span><span class="rvts65"> folder with files for the signs themselves, both JSON files for written information and video files</span></p>
+<p class="rvps30"><span class="rvts12">*.json</span></p>
+<p class="rvps30"><span class="rvts12">*.mp4</span></p>
+<p class="rvps22"><span class="rvts41">_sentences</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63">←</span><span class="rvts65"> folder with video files for example sentences</span></p>
+<p class="rvps30"><span class="rvts12">*.mp4</span></p>
+<p class="rvps22"><span class="rvts41">_extra_videos</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63">←</span><span class="rvts65"> folder with extra videos</span></p>
+<p class="rvps30"><span class="rvts12">*.mp4</span></p>
+<p class="rvps22"><span class="rvts41">_extra_pictures</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts63">←</span><span class="rvts65"> folder with extra images</span></p>
+<p class="rvps30"><span class="rvts12">*.jpg, *.png, </span><span class="rvts65">etc.</span></p>
+<p class="rvps29"><span class="rvts6">(This organization is for version 0.9.2 and later. In versions 0.9.1 and earlier, the sub-folder names were the same, but without the initial underline. We made the change to protect data from a nasty bug in earlier versions.)</span></p>
+<p class="rvps2"><span class="rvts6">The &lt;__name__&gt; of the main JSON file for the project is the same as the &lt;__name__&gt; of the project folder. Usually, the name is similar to the title of the dictionary, but not identical. It is often identical to the </span><span class="rvts51">Project ID</span><span class="rvts6"> that SooSL assigns to the dictionary when you first create it.</span></p>
+<p class="rvps2"><span class="rvts6">file names of video and image files are the same as your original file names, except that:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <li class="rvps5 noindent"><a class="rvts13" href="CharactersinfilenamesD.html">problematic characters</a><span class="rvts12"> are removed</span></li>
+ <li class="rvps5 noindent"><span class="rvts12">an id number is added at the end of the basename. The id number is the same as the id number used to identify signs, example sentences, and extra videos and images inside the JSON files. It is based on when you added the file to the project.</span></li>
+ <ul style="text-indent: 0px; padding: 0; margin: 0 0 0 48px; list-style-position: outside; list-style-type: circle;">
+  <li class="rvps8 noindent"><span class="rvts12">In version 0.9.2 and later, each sign has a JSON file and video file. The JSON file includes the written information about each sign. The two files have the same file name, but with different extensions: .json vs. .mp4.&nbsp;</span></li>
+  <li class="rvps8 noindent"><span class="rvts12">In versions 0.9.0 and 0.9.1, all the written information about signs was in the project JSON file; not in individual JSON files for each sign. We reorganized in version 0.9.2 to make it possible for more than one user to work on the same dictionary at the same time.&nbsp;</span></li>
+  <li class="rvps8 noindent"><span class="rvts12">In version 0.8.x and earlier, the written information about signs was in an SQLite file. We switched from using SQLite to JSON in version 0.9.0, to integrate SooSL Desktop better with SooSL Web.</span></li>
+ </ul>
+</ul>
+<h1 class="rvps4"><span class="rvts0"><span class="rvts11">Identifiers for SooSL projects</span></span></h1>
+<p class="rvps2"><span class="rvts6">Every </span><span class="rvts51">dictionary project</span><span class="rvts6"> has three identifiers:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <li class="rvps5 noindent"><span class="rvts12">a folder name</span></li>
+ <li class="rvps5 noindent"><span class="rvts12">a title</span></li>
+ <li class="rvps5 noindent"><span class="rvts12">a Project ID</span></li>
+</ul>
+<p class="rvps2"><span class="rvts6">The folder name is used to identify the project on the computer's hard drive. This is the folder where all the files for the dictionary are stored. The folder name is also used in the JSON file name. These two should always be the same. If you rename one, you should rename the other also; otherwise, SooSL will not recognize that the folder contains a SooSL dictionary and will not open it.</span></p>
+<p class="rvps2"><span class="rvts6">Similarly, an exported </span><span class="rvts51">ZooZL file</span><span class="rvts6"> has a file name, which is often the same as the folder name that it was exported from, or similar to it.</span></p>
+<p class="rvps2"><span class="rvts6">The title is a friendly name that is shown in the SooSL Desktop title bar and in the </span><a class="rvts15" href="Generalinformationaboutadictiona.html">general information</a><span class="rvts6"> about a dictionary. It is intended for use by people. When you publish a dictionary on SooSL Web, this is the name that is shown to users. You can easily change it by </span><span class="rvts21">choosing About dictionary </span><span class="rvts6">from the </span><img alt="" style="vertical-align: middle; padding : 1px;" src="lib/Icon_Wrench.png"><span class="rvts6">Tools menu, and then </span><span class="rvts21">clicking Edit</span><span class="rvts6">. It is stored in the main JSON file for the project.</span></p>
+<p class="rvps2"><span class="rvts6">Every dictionary project also has a unique </span><span class="rvts51">Project ID</span><span class="rvts6">. SooSL assigns the Project ID when it first creates a </span><a class="rvts15" href="StartanewdictionaryprojectD.html">new dictionary</a><span class="rvts6">, based on the dictionary's first title and the time it was created. You can see a dictionary's project ID in the </span><a class="rvts15" href="Generalinformationaboutadictiona.html">general information</a><span class="rvts6"> about a dictionary. SooSL uses it to identify which dictionary projects are different versions of the same dictionary. This is important when you </span><a class="rvts15" href="ImportadictionaryprojectD.html">import</a><span class="rvts6">, </span><a class="rvts15" href="ExportadictionaryprojectD.html">export</a><span class="rvts6"> and </span><a class="rvts15" href="Newtopic2.html">upload</a><span class="rvts6"> files.</span></p>
+<p class="rvps2"><span class="rvts6">The Project ID is stored inside the project's main JSON file. Often it is also used as the name of the project's folder and main JSON file and for the name of exported </span><span class="rvts51">ZooZL files</span><span class="rvts6">. You may use a different name for the folder and JSON file and for ZooZL files if you want. However, do not change the Project ID inside the JSON file, or you will make it impossible for SooSL to recognize other versions of the same dictionary.</span></p>
+<h1 class="rvps4"><span class="rvts0"><span class="rvts11">File formats inside dictionary projects</span></span></h1>
+<p class="rvps2"><span class="rvts6">SooSL uses these file formats inside a dictionary project:</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <li class="rvps5 noindent"><span class="rvts12">written information:</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">JSON text files, with a .json extension</span></li>
+ <li class="rvps5 noindent"><span class="rvts12">videos:</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">MP4 files, with an .mp4 extension</span></li>
+ <li class="rvps5 noindent"><span class="rvts12">images:</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts12">any standard image format (see below)</span></li>
+</ul>
+<h2 class="rvps11"><span class="rvts0"><span class="rvts31">JSON text files (.json)</span></span></h2>
+<p class="rvps2"><span class="rvts6">JSON files are human-readable text files. In version 0.9.2 and later, there is one JSON file with information about the whole project, plus individual JSON files for each sign.</span></p>
+<p class="rvps2"><span class="rvts6">You can edit them manually with a text editor if you are careful. Do this at your own risk. Before you do, learn about </span><a class="rvts15" href="https://en.wikipedia.org/wiki/JSON" target="_blank">JSON file format</a><span class="rvts6"> and study the details of SooSL's JSON files to make sure you understand them.&nbsp;</span></p>
+<p class="rvps2"><span class="rvts6">We recommend you make </span><a class="rvts15" href="Keepsparecopiesbackupsofdictiona.html">a spare copy</a><span class="rvts6"> (backup) of the whole project before trying to edit any JSON files manually. That way, if your changes don't work, you can recover your project. You should make a spare copy of </span><span class="rvts40">the whole project</span><span class="rvts6">, including all the video and image files, because some changes can trigger other changes the next time you open SooSL, including deleting files. The easiest way to do this is to </span><a class="rvts15" href="ExportadictionaryprojectD.html">export the dictionary project</a><span class="rvts6"> to a ZooZL file.</span></p>
+<p class="rvps2"><span class="rvts6">Don't change anything you don't understand. Especially, don't change timestamps or hashes, because they need to be left alone for SooSL to work properly. Be very careful about changing ID numbers, because each sign must have a unique ID number and ID numbers are also used in SooSL's internal copies of videos and images.</span></p>
+<p class="rvps2"><span class="rvts6">If you rename video or image files in a project, you will also need to change the references to them inside the JSON file(s) for the signs that use those videos or images.&nbsp;</span></p>
+<h2 class="rvps11"><span class="rvts0"><span class="rvts31">Videos (.mp4)</span></span></h2>
+<p class="rvps2"><span class="rvts6">SooSL converts videos to reduce the file size. (It converts them with </span><a class="rvts15" href="https://www.ffmpeg.org/" target="_blank">ffmpeg</a><span class="rvts6">, so your original videos can be in any format that ffmpeg recognizes.</span><span class="rvts6">) SooSL sometimes reduces the resolution. This is okay, because SooSL does not need to display the videos at a large size. It always uses moderate compression and quality settings. Smaller video files save storage space on the computer, they make ZooZL files smaller for transferring between computers, and they make SooSL Web run faster. The total size of the videos is the main factor determining the size of the whole project; other files take up relatively little space. (See </span><a class="rvts15" href="Computerrequirements.html#HardDiskSpace">this help topic</a><span class="rvts6"> to estimate how much hard disk space you will need for a project.)</span></p>
+<h2 class="rvps11"><span class="rvts0"><span class="rvts31">Images (.jpg, .png, and others)</span></span></h2>
+<p class="rvps2"><span class="rvts6">SooSL leaves images in the original format you provide. This means that you should start with standard image file formats that are widely-supported. We recommend JPG (.jpg) for photos and PNG (.png) for all other images. These two formats are supported in all operating systems used by SooSL. Other file formats may not work when you move a dictionary project to another operating system or </span><a class="rvts15" href="PublishadictionaryprojecttoSooSL.html">publish it</a><span class="rvts6"> on SooSL Web.</span></p>
+<h1 class="rvps4"><span class="rvts0"><span class="rvts11">ZooZL</span></span><a name="zoozl"></a><span class="rvts0"><span class="rvts11"> file structure</span></span></h1>
+<p class="rvps2"><span class="rvts6">When you </span><a class="rvts15" href="ExportadictionaryprojectD.html">export</a><span class="rvts6"> a dictionary project, SooSL packs all the files into a single ZooZL file. This is actually a standard ZIP file, except it has a .zoozl extension instead of .zip and it has a special internal folder (directory) structure. You can change the extension from .zoozl to .zip and uncompress it if you want. That is what SooSL does when it </span><a class="rvts15" href="ImportadictionaryprojectD.html">imports</a><span class="rvts6"> the ZooZL file.</span></p>
+<p class="rvps2"><span class="rvts6">Inside a ZooZL file, the files and sub-folders are the same as in the project folder for dictionaries in version 0.9.2, except</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 24px; list-style-position: outside; list-style-type: disc;">
+ <li class="rvps5 noindent"><span class="rvts12">The sub-folder names do not have the initial underline.</span></li>
+ <li class="rvps5 noindent"><span class="rvts12">All written information is together in the main project JSON file. (In an active dictionary project, written information about each sign is in an individual JSON file for that sign.)</span></li>
+ <li class="rvps5 noindent"><span class="rvts12">There is an inventory file that lists all the other files in the project (including the individual JSON files for signs that are used in an active dictionary project). This inventory is used when </span><a class="rvts13" href="PublishadictionaryprojecttoSooSL.html">publishing</a><span class="rvts12"> a dictionary project to SooSL Web.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts6">This structure inside ZooZL files from version 0.9.2 and later is basically the same as what SooSL used in active dictionary projects and ZooZL files for versions 0.9.0 and 0.9.1. The only difference is that ZooZL files from version 0.9.2 and later include the inventory file. This provides limited backwards compatibility.</span></p>
+<h1 class="rvps4"><span class="rvts0"><span class="rvts11">Compatibility between versions</span></span></h1>
+<p class="rvps2"><span class="rvts6">ZooZL files created by version 0.9.2 and newer are "backward compatible" to version 0.9.0. This means you can </span><a class="rvts15" href="ImportadictionaryprojectD.html">import them</a><span class="rvts6"> if necessary into any 0.9.x version. You can send a ZooZL file created with version 0.9.2 to someone who has an earlier 0.9.x version, and they should be able to import it.&nbsp;</span></p>
+<p class="rvps2"><span class="rvts6">However, we recommend that you always use the newest version of SooSL Desktop. It has fixed many bugs and includes many new features. So, it is better if the person receiving the ZooZL file upgrades to SooSL Desktop version 0.9.2 before trying to import it.</span></p>
+<p class="rvps2"><span class="rvts6">You cannot import ZooZL files from versions 0.9.x into older versions of SooSL (versions 0.8.x and earlier). However, you </span><span class="rvts40">can</span><span class="rvts6"> import ZooZL files from versions 0.8.x into versions 0.9.x. SooSL will convert the information in them to the newer format. After that, you must use the newer versions to edit the dictionary projects. You can no longer open them in the older versions.</span></p>
+<p class="rvps2"><span class="rvts6">For active projects, compatibility is only reliable in one direction. Newer versions of SooSL can read older dictionary projects. This happens when you upgrade SooSL from one version to a later version. It might also happen if you move a dictionary project from one computer to another without creating a ZooZL file, but just copying all the project files. When the newer version of SooSL opens a dictionary project that was created with an older version, it converts the project to the newer version. After that, you must use the new version to read and change the dictionary. You can no longer open it in the older version.</span></p>
+<p class="rvps2"><span class="rvts6">In a few cases, some older versions of SooSL can read dictionaries created by some newer versions. However, most of the time you will need to use the version that last opened the dictionary or a newer version. If SooSL cannot open a dictionary because it is in a newer format, it will tell you what version of SooSL you need to open it.&nbsp;</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<h1 class="rvps4"><span class="rvts0"><span class="rvts11"><br/></span></span></h1>
+<p class="rvps2"><span class="rvts6"></span><span class="rvts6"></span></p>
+<p class="rvps7" style="clear: both;"><span class="rvts16">Created with the Personal Edition of HelpNDoc: </span><a class="rvts17" href="https://www.helpndoc.com/feature-tour/stunning-user-interface/">Make Documentation a Breeze with HelpNDoc's Clean and Efficient User Interface</a></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				SooSL&trade; is copyright &copy; 2009 - 2025 by SIL International. All Rights Reserved.
+			</div>
+		</div>
+	
+	
+
+	
+</body>
+	
+</html>
+
