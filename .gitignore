@@ -13,3 +13,6 @@ __pycache__/
 
 # Log files
 *.log
+
+#
+venv/
